@@ -1,0 +1,16 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="Dto\Relatorios\" />
+  </ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\rh.financeiro.CrossCutting\rh.financeiro.CrossCutting.csproj" />
+	</ItemGroup>
+</Project>
