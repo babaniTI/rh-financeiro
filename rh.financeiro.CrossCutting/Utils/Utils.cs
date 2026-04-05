@@ -14,6 +14,7 @@ using System.Xml.Serialization;
 using System.Xml;
 using Microsoft.AspNetCore.Http;
 using System.Text.RegularExpressions;
+using Newtonsoft.Json;
 
 namespace rh.financeiro.CrossCuting
 {
@@ -26,6 +27,16 @@ namespace rh.financeiro.CrossCuting
         public static string GetEnumDescription(Enum value)
         {
             return value.GetType().GetMember(value.ToString()).FirstOrDefault()?.GetCustomAttribute<DescriptionAttribute>()?.Description ?? value.ToString();
+        }
+
+        public static string ConverterXmlParaJson(string xml)
+        {
+            var doc = new XmlDocument();
+            doc.LoadXml(xml);
+
+            string json = JsonConvert.SerializeXmlNode(doc, Newtonsoft.Json.Formatting.Indented, true);
+
+            return json;
         }
 
         public static string NormalizarTelefone(string telefone)

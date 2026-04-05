@@ -13,6 +13,7 @@ namespace rh.financeiro.Domain.Entities
     public class Parcela
     {
         [Key]
+        [Column("id")]
         public Guid Id { get; set; }
 
         [Column("titulo_id")]
@@ -32,5 +33,8 @@ namespace rh.financeiro.Domain.Entities
 
         [Column("status")]
         public StatusParcela Status { get; set; }
+
+        [Column("descricao_pagamento")]
+        public string? DescricaoPagamento { get; set; }
     }
 }

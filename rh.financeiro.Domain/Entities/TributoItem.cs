@@ -13,6 +13,7 @@ namespace rh.financeiro.Domain.Entities
     public class TributoItem
     {
         [Key]
+        [Column("id")]
         public Guid Id { get; set; }
 
         [Column("item_id")]

@@ -13,6 +13,8 @@ namespace rh.financeiro.Domain.Entities
     public class DocumentoFiscal
     {
         [Key]
+        [Column("id")]
+
         public Guid Id { get; set; }
 
         [Column("empresa_id")]
@@ -41,5 +43,17 @@ namespace rh.financeiro.Domain.Entities
 
         [Column("dados_tributarios")]
         public string DadosTributarios { get; set; }
+
+        [Column("status")]
+        public TipoStatusDocumentoFiscal status { get; set; }
+
+        [Column("declaracao_importacao_id")]
+        public string? DeclaracaoImportacaoId { get; set; }
+
+        [Column("created_at")]
+        public DateTime Created_at { get; set; }
+
+        [Column("updated_at")]
+        public DateTime Updated_at { get; set; }
     }
 }

@@ -31,6 +31,14 @@ namespace rh.financeiro.Domain.Enums
         OUTRO
     }
 
+    public enum TipoStatusDocumentoFiscal
+    {
+        Pendente,
+        Processado,
+        Cancelado
+    }
+
+
     public enum TipoCategoriaFinanceira
     {
         Receita,

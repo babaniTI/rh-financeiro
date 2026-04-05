@@ -61,6 +61,10 @@ namespace rh.financeiro.Data.Context.Default
                 .Property(x => x.Tipo)
                 .HasConversion<string>();
 
+            modelBuilder.Entity<DocumentoFiscal>()
+                .Property(x => x.status)
+                .HasConversion<string>();
+
             modelBuilder.Entity<CategoriaFinanceira>()
                 .Property(x => x.Tipo)
                 .HasConversion<string>();

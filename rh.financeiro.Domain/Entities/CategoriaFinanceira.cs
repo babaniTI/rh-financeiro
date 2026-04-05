@@ -13,6 +13,7 @@ namespace rh.financeiro.Domain.Entities
     public class CategoriaFinanceira
     {
         [Key]
+        [Column("id")]
         public Guid Id { get; set; }
 
         [Column("empresa_id")]
@@ -21,10 +22,16 @@ namespace rh.financeiro.Domain.Entities
         [Column("nome")]
         public string Nome { get; set; }
 
+        [Column("codigo")]
+        public string Codigo { get; set; }
+
         [Column("tipo")]
         public TipoCategoriaFinanceira Tipo { get; set; }
 
         [Column("ativo")]
         public bool Ativo { get; set; }
+
+        [Column("cfop")]
+        public string Cfop { get; set; }
     }
 }

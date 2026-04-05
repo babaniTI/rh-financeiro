@@ -30,6 +30,9 @@ namespace rh.financeiro.Domain.Entities
         [Column("conta")]
         public string Conta { get; set; }
 
+        [Column("saldo_inicial")]
+        public decimal SaldoInicial { get; set; }
+
         [Column("descricao")]
         public string Descricao { get; set; }
 

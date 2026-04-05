@@ -63,7 +63,7 @@ namespace rh.financeiro.webservice.Controllers.Participantes
             #endregion
         }
 
-        [HttpPut()]
+        [HttpPut("{id}")]
         public async Task<ActionResult<ResponseApi>> EditarParticipante([FromBody] EditarParticipanteRequest request, [FromRoute] string id)
         {
             #region Consistencias

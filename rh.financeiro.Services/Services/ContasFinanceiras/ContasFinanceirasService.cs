@@ -2,9 +2,14 @@
 using rh.financeiro.Data.Context.Default;
 using rh.financeiro.Domain.Dto.Paginacao;
 using rh.financeiro.Domain.Dto.Request.ContasFinanceiras.BuscarContasFinanceiras;
+using rh.financeiro.Domain.Dto.Request.ContasFinanceiras.CriarContaFinanceira;
+using rh.financeiro.Domain.Dto.Request.ContasFinanceiras.EditarContaFinanceira;
+using rh.financeiro.Domain.Dto.Request.Participantes.CriarParticipante;
+using rh.financeiro.Domain.Dto.Request.Participantes.EditarParticipante;
 using rh.financeiro.Domain.Dto.Response.ContasFinanceiras;
 using rh.financeiro.Domain.Dto.Response.Participantes.BuscarParticipantes;
 using rh.financeiro.Domain.Entities;
+using rh.financeiro.Domain.Enums;
 using rh.financeiro.Domain.Interfaces.Service.ContaFinanceiras;
 using rh.financeiro.Domain.Interfaces.UnitOfWorks;
 using System;
@@ -30,6 +35,57 @@ namespace rh.financeiro.Services.Services.ContasFinanceiras
         #endregion
 
         #region Public Methods
+
+        public async Task<ContaFinanceira?> CriarContaFinanceira(CriarContaFinanceiraRequest request, string UsuarioId)
+        {
+            #region Fields
+            var repoContaFinanceira = _unitOfWork.Repository<ContaFinanceira>();
+            var repoUsuarioEmpresa = _unitOfWork.Repository<UsuarioEmpresa>();
+            Guid EmpresaId = await BuscarEmpresaIdPorUsarioId(UsuarioId);
+            string agencia = $"{request.agencia}-{request.agenciaDigito}";
+            string conta = $"{request.conta}-{request.contaDigito}";
+            #endregion
+
+            #region Logic
+            try
+            {
+                bool jaExiste = await repoContaFinanceira.QueryableObject()
+                    .AnyAsync(x => x.Agencia == agencia && x.Conta == conta && x.EmpresaId == EmpresaId);
+
+                if (jaExiste)
+                    return null;
+
+                var NovaContaFinanceira = new ContaFinanceira()
+                {
+                    EmpresaId = EmpresaId,
+                    Tipo = request.tipo switch
+                    {
+                        "CORRENTE" => TipoConta.Corrente,
+                        "POUPANCA" => TipoConta.Poupanca,
+                        "CAIXA" => TipoConta.Caixa,
+                        "INVESTIMENTO" => TipoConta.Investimento,
+                        "CARTAO" => TipoConta.Cartao
+                    },
+                    Banco = request.banco,
+                    Agencia = agencia,
+                    Conta = conta,
+                    Descricao = request.descricao,
+                    SaldoInicial = (decimal)request.saldoInicial,
+                    Ativo = true
+                };
+
+                await repoContaFinanceira.AddAsync(NovaContaFinanceira);
+                return NovaContaFinanceira;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                throw;
+            }
+            #endregion
+        }
+
+
         public async Task<PaginacaoResponse<BuscarContasFinanceirasResponse>> BuscarContasFinanceiras(BuscarContasFinanceirasRequest request, string UsuarioId)
         {
             #region Fields
@@ -48,11 +104,15 @@ namespace rh.financeiro.Services.Services.ContasFinanceiras
                     .Where(x => x.EmpresaId.ToString() == EmpresaId.ToString());
 
                 // Filtro por tipo
-                if (request.tipo.HasValue)
+                if (request.tipo != null)
                 {
                     queryContaFinanceira = queryContaFinanceira
-                        .Where(x => x.Tipo == request.tipo.Value);
+                        .Where(x => x.Tipo.ToString() == request.tipo);
                 }
+
+                // Filtrar por ativo
+                queryContaFinanceira = queryContaFinanceira
+                    .Where(x => x.Ativo == request.Ativo);
 
                 var total = await queryContaFinanceira.CountAsync();
 
@@ -89,13 +149,13 @@ namespace rh.financeiro.Services.Services.ContasFinanceiras
                     {
                         id = x.Id.ToString(),
                         descricao = x.Descricao,
-                        tipo = x.Tipo,
+                        tipo = x.Tipo.ToString(),
                         banco = x.Banco,
                         agencia = agenciaSplit?.Length > 0 ? agenciaSplit[0] : null,
                         agenciaDigito = agenciaSplit?.Length > 1 ? agenciaSplit[1] : null,
                         conta = contaSplit?.Length > 0 ? contaSplit[0] : null,
                         contaDigito = contaSplit?.Length > 1 ? contaSplit[1] : null,
-                        saldoAtual = mov.SaldoTotal,
+                        saldoAtual = mov.SaldoTotal + x.SaldoInicial,
                         dataUltimoMovimento = mov.UltimaMovimentacao.ToString("O"),
                         Ativo = x.Ativo,
                         createdAt = x.CreatedAt.ToString("O"),
@@ -146,6 +206,101 @@ namespace rh.financeiro.Services.Services.ContasFinanceiras
             #endregion
 
         }
+
+        public async Task<ContaFinanceira?> EditarContaFinanceiraPorId(EditarContaFinanceiraRequest request, string id, string UsuarioId)
+        {
+            #region Fields
+            var repoContaFinanceira = _unitOfWork.Repository<ContaFinanceira>();
+            #endregion
+
+            #region Logic
+            try
+            {
+                // Buscando a EmpresaId pelo usuario autenticado
+                Guid EmpresaId = await BuscarEmpresaIdPorUsarioId(UsuarioId);
+
+                var contaFinanceira = await repoContaFinanceira.QueryableObject()
+                    .FirstOrDefaultAsync(x => x.Id.ToString() == id && x.EmpresaId.ToString() == EmpresaId.ToString());
+
+                if (contaFinanceira == null)
+                    return null;
+
+                if (request.banco != null)
+                    contaFinanceira.Banco = request.banco;
+
+                if (request.agencia != null && request.agenciaDigito != null)
+                {
+                    string agencia = $"{request.agencia}-{request.agenciaDigito}";
+                    contaFinanceira.Agencia = agencia;
+                }
+
+                if (request.conta != null && request.contaDigito != null)
+                {
+                    string conta = $"{request.conta}-{request.contaDigito}";
+                    contaFinanceira.Conta = conta;
+                }
+
+                if (request.tipo != null)
+                {
+                    contaFinanceira.Tipo = request.tipo.ToUpper() switch
+                    {
+                        "CORRENTE" => TipoConta.Corrente,
+                        "POUPANCA" => TipoConta.Poupanca,
+                        "CAIXA" => TipoConta.Caixa,
+                        "INVESTIMENTO" => TipoConta.Investimento,
+                        "CARTAO" => TipoConta.Cartao
+                    };
+                }
+
+                await repoContaFinanceira.UpdateAsync(contaFinanceira);
+                return contaFinanceira;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                throw;
+            }
+            #endregion
+        }
+
+        public async Task<bool> DesativarOuReativarContaFinanceiraPorId(string id, string Acao, string UsuarioId)
+        {
+            #region Fields
+            var repoContaFinanceira = _unitOfWork.Repository<ContaFinanceira>();
+            #endregion
+
+            #region Logic
+            try
+            {
+                // Buscando a EmpresaId pelo usuario autenticado
+                Guid EmpresaId = await BuscarEmpresaIdPorUsarioId(UsuarioId);
+
+                var contaFinanceira = await repoContaFinanceira.QueryableObject()
+                    .FirstOrDefaultAsync(x => x.Id.ToString() == id && x.EmpresaId.ToString() == EmpresaId.ToString());
+
+                if (contaFinanceira == null)
+                    return false;
+
+                // Fazendo o controle
+
+                if(Acao.ToUpper() == "ATIVAR")
+                    contaFinanceira.Ativo = true;
+
+                if (Acao.ToUpper() == "DESATIVAR")
+                    contaFinanceira.Ativo = false;
+
+                await repoContaFinanceira.UpdateAsync(contaFinanceira);
+
+                return true;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                throw;
+            }
+            #endregion
+        }
+
         #endregion
 
         #region Private Methods

@@ -12,6 +12,7 @@ namespace rh.financeiro.Domain.Entities
     public class DocumentoFiscalItem
     {
         [Key]
+        [Column("id")]
         public Guid Id { get; set; }
 
         [Column("documento_id")]
@@ -22,6 +23,12 @@ namespace rh.financeiro.Domain.Entities
 
         [Column("descricao")]
         public string Descricao { get; set; }
+
+        [Column("ncm")]
+        public string Ncm { get; set; }
+
+        [Column("cfop")]
+        public string Cfop { get; set; }
 
         [Column("quantidade")]
         public decimal? Quantidade { get; set; }

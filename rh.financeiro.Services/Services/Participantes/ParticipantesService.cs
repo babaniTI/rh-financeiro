@@ -43,15 +43,15 @@ namespace rh.financeiro.Services.Services.Participantes
             #region Logic
             try
             {
-                bool jaExiste = await repoParticipante.QueryableObject()
-                    .AnyAsync(x => x.Documento == request.cpfcnpj);
-
-                if (jaExiste)
-                    return null;
-
                 // Buscando a EmpresaId pelo usuario autenticado
                 Guid EmpresaId = await BuscarEmpresaIdPorUsarioId(UsuarioId);
 
+                bool jaExiste = await repoParticipante.QueryableObject()
+                    .AnyAsync(x => x.Documento == request.cpfcnpj && x.EmpresaId == EmpresaId);
+
+                if (jaExiste)
+                    return null;
+                
                 var NovoParticipante = new Participante()
                 {
                     EmpresaId = EmpresaId,

@@ -13,6 +13,7 @@ namespace rh.financeiro.Domain.Entities
     public class Titulo
     {
         [Key]
+        [Column("id")]
         public Guid Id { get; set; }
 
         [Column("empresa_id")]
@@ -41,8 +42,5 @@ namespace rh.financeiro.Domain.Entities
 
         [Column("created_at")]
         public DateTime? CreatedAt { get; set; }
-
-        [Column("conta_id")]
-        public Guid? ContaFinanceiraID { get; set; }  
     }
 }

@@ -11,7 +11,7 @@ namespace rh.financeiro.Domain.Dto.Response.ContasFinanceiras
     {
         public string id { get; set; }
         public string? descricao { get; set; }
-        public TipoConta tipo { get; set; }
+        public string tipo { get; set; }
         public string? banco { get; set; }
         public string? agencia { get; set; }
         public string? agenciaDigito { get; set; }

@@ -2,7 +2,11 @@
 using rh.financeiro.CrossCuting;
 using rh.financeiro.Domain.Common.Http.Response;
 using rh.financeiro.Domain.Dto.Request.ContasFinanceiras.BuscarContasFinanceiras;
+using rh.financeiro.Domain.Dto.Request.ContasFinanceiras.CriarContaFinanceira;
+using rh.financeiro.Domain.Dto.Request.ContasFinanceiras.EditarContaFinanceira;
 using rh.financeiro.Domain.Dto.Request.Participantes.BuscarParticipantes;
+using rh.financeiro.Domain.Dto.Request.Participantes.CriarParticipante;
+using rh.financeiro.Domain.Dto.Request.Participantes.EditarParticipante;
 using rh.financeiro.Domain.Enums;
 using rh.financeiro.Domain.Interfaces.Service.ContaFinanceiras;
 using rh.financeiro.Domain.Interfaces.Service.Participantes;
@@ -19,6 +23,87 @@ namespace rh.financeiro.webservice.Controllers.ContaFinanceira
         public ContaFinanceiraController(IContasFinanceirasService contaFinanceiraService)
         {
             _contaFinanceiraService = contaFinanceiraService;
+        }
+
+
+        [HttpPost()]
+        public async Task<ActionResult<ResponseApi>> CriarContaFinanceira([FromBody] CriarContaFinanceiraRequest request)
+        {
+            #region Consistencias
+            if (request is null)
+            {
+                return StatusCode((int)ReturnStatus.BadRequest, ResponseApi.FormatResponse(ReturnStatus.BadRequest, ReturnCodes.EmptyRequest, false,
+                    $"Validations CriarContaFinanceira: {Utils.GetEnumDescription(ReturnCodes.EmptyRequest)}"));
+            }
+            #endregion
+
+            #region Logica
+            try
+            {
+                string UsuarioId = Utils.GetUserId(HttpContext);
+                var response = await _contaFinanceiraService.CriarContaFinanceira(request, UsuarioId);
+
+                if (response == null)
+                {
+                    return StatusCode((int)ReturnStatus.BadRequest, ResponseApi.FormatResponse(ReturnStatus.BadRequest, ReturnCodes.EmptyField, false,
+                        "Conta Financeira já existe!"));
+                }
+
+                return StatusCode((int)ReturnStatus.Created, ResponseApi.FormatResponse(ReturnStatus.Created, ReturnCodes.Ok, true,
+                    "Conta Financeira criado com sucesso", response));
+            }
+            catch (Exception ex)
+            {
+                return new ResponseApi()
+                {
+                    Code = (int)ReturnCodes.ExceptionEx,
+                    Data = DateTime.Now,
+                    Message = $"MESSAGE => {ex.Message} || INNER EXCEPTION => {ex.InnerException}",
+                    Status = (int)ReturnStatus.InternalServerError,
+                    Success = false
+                };
+            }
+            #endregion
+        }
+
+        [HttpPut("{id}")]
+        public async Task<ActionResult<ResponseApi>> EditarContaFinanceira([FromBody] EditarContaFinanceiraRequest request, [FromRoute] string id)
+        {
+            #region Consistencias
+            if (request is null)
+            {
+                return StatusCode((int)ReturnStatus.BadRequest, ResponseApi.FormatResponse(ReturnStatus.BadRequest, ReturnCodes.EmptyRequest, false,
+                    $"Validations EditarContaFinanceira: {Utils.GetEnumDescription(ReturnCodes.EmptyRequest)}"));
+            }
+            #endregion
+
+            #region Logica
+            try
+            {
+                string UsuarioId = Utils.GetUserId(HttpContext);
+                var response = await _contaFinanceiraService.EditarContaFinanceiraPorId(request, id, UsuarioId);
+
+                if (response == null)
+                {
+                    return StatusCode((int)ReturnStatus.BadRequest, ResponseApi.FormatResponse(ReturnStatus.BadRequest, ReturnCodes.EmptyField, false,
+                        "Conta Financeira não existe!"));
+                }
+
+                return StatusCode((int)ReturnStatus.Ok, ResponseApi.FormatResponse(ReturnStatus.Ok, ReturnCodes.Ok, true,
+                    "Conta Financeira atualizado com sucesso", response));
+            }
+            catch (Exception ex)
+            {
+                return new ResponseApi()
+                {
+                    Code = (int)ReturnCodes.ExceptionEx,
+                    Data = DateTime.Now,
+                    Message = $"MESSAGE => {ex.Message} || INNER EXCEPTION => {ex.InnerException}",
+                    Status = (int)ReturnStatus.InternalServerError,
+                    Success = false
+                };
+            }
+            #endregion
         }
 
         [HttpGet()]
@@ -100,5 +185,41 @@ namespace rh.financeiro.webservice.Controllers.ContaFinanceira
             }
             #endregion
         }
+
+        [HttpDelete("{id}")]
+        public async Task<ActionResult<ResponseApi>> DesativarOuReativarContaFinaceira([FromRoute] string id, [FromQuery] string Acao)
+        {
+            #region Consistencias
+            #endregion
+
+            #region Logica
+            try
+            {
+                string UsuarioId = Utils.GetUserId(HttpContext);
+                var success = await _contaFinanceiraService.DesativarOuReativarContaFinanceiraPorId(id, Acao, UsuarioId);
+
+                if (!success)
+                {
+                    return StatusCode((int)ReturnStatus.BadRequest, ResponseApi.FormatResponse(ReturnStatus.BadRequest, ReturnCodes.EmptyField, false,
+                        "Conta Financeira não existe!"));
+                }
+
+                return StatusCode((int)ReturnStatus.Ok, ResponseApi.FormatResponse(ReturnStatus.Ok, ReturnCodes.Ok, true,
+                    "Conta Financeira atualizado com sucesso"));
+            }
+            catch (Exception ex)
+            {
+                return new ResponseApi()
+                {
+                    Code = (int)ReturnCodes.ExceptionEx,
+                    Data = DateTime.Now,
+                    Message = $"MESSAGE => {ex.Message} || INNER EXCEPTION => {ex.InnerException}",
+                    Status = (int)ReturnStatus.InternalServerError,
+                    Success = false
+                };
+            }
+            #endregion
+        }
+
     }
 }

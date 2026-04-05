@@ -7,10 +7,22 @@ using rh.financeiro.Data.Context.Default;
 using rh.financeiro.Data.Repository;
 using rh.financeiro.Domain.Interfaces.Repository;
 using rh.financeiro.Domain.Interfaces.Service.Auth;
+using rh.financeiro.Domain.Interfaces.Service.CategoriaFinanceiras;
+using rh.financeiro.Domain.Interfaces.Service.ContaFinanceiras;
+using rh.financeiro.Domain.Interfaces.Service.DocumentoFiscal;
+using rh.financeiro.Domain.Interfaces.Service.Jobs;
+using rh.financeiro.Domain.Interfaces.Service.Nfe;
 using rh.financeiro.Domain.Interfaces.Service.Participantes;
+using rh.financeiro.Domain.Interfaces.Service.Titulo;
 using rh.financeiro.Domain.Interfaces.UnitOfWorks;
 using rh.financeiro.Services.Services.Auth;
+using rh.financeiro.Services.Services.CategoriaFinanceiras;
+using rh.financeiro.Services.Services.ContasFinanceiras;
+using rh.financeiro.Services.Services.DocumentoFiscais;
+using rh.financeiro.Services.Services.Jobs;
+using rh.financeiro.Services.Services.Nfe;
 using rh.financeiro.Services.Services.Participantes;
+using rh.financeiro.Services.Services.Titulos;
 using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -97,7 +109,12 @@ builder.Services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepositor
 builder.Services.AddScoped(typeof(IUnitOfWork<>), typeof(UnitOfWork<>));
 builder.Services.AddScoped<IAuthService, AuthService>();
 builder.Services.AddScoped<IParticipantesService, ParticipantesService>();
-
+builder.Services.AddScoped<IJobsService, JobsService>();
+builder.Services.AddScoped<ICategoriaFinanceiraService, CategoriaFinanceiraService>();
+builder.Services.AddScoped<IContasFinanceirasService, ContasFinanceirasService>();
+builder.Services.AddScoped<INfeService, NfeService>();
+builder.Services.AddScoped<IDocumentoFiscalService, DocumentoFiscalService>();
+builder.Services.AddScoped<ITituloService, TituloService>();
 
 
 var app = builder.Build();

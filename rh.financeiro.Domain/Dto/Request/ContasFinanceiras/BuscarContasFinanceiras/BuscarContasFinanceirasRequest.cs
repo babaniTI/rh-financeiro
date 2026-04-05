@@ -10,6 +10,7 @@ namespace rh.financeiro.Domain.Dto.Request.ContasFinanceiras.BuscarContasFinance
 {
     public class BuscarContasFinanceirasRequest : PaginacaoRequest
     {
-        public TipoConta? tipo { get; set; }
+        public string? tipo { get; set; }
+        public bool Ativo {  get; set; }
     }
 }
