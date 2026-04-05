@@ -98,15 +98,25 @@ namespace rh.financeiro.Services.Services.Jobs
                     // Caso tenha informacoes do consumidor, cria um participante
                     if (documento?.NFe?.infNFe?.dest != null)
                     {
-                        participante = new Participante()
-                        {
-                            EmpresaId = EmpresaId,
-                            Tipo = TipoParticipante.Cliente,
-                            Nome = documento?.NFe?.infNFe?.dest?.xNome,
-                            Documento = documento?.NFe?.infNFe?.dest?.CPF ?? documento?.NFe?.infNFe?.dest?.CNPJ,
-                        };
+                        string CPfCNPJ = documento?.NFe?.infNFe?.dest?.CPF ?? documento?.NFe?.infNFe?.dest?.CNPJ;
 
-                        await _unitOfWork.Repository<Participante>().AddAsync(participante);
+                        // Verificar se ja existe na base
+                        bool ExisteParticipante = await _unitOfWork.Repository<Participante>()
+                            .QueryableObject()
+                            .AnyAsync(x => x.Documento == CPfCNPJ);
+
+                        if (!ExisteParticipante)
+                        {
+                            participante = new Participante()
+                            {
+                                EmpresaId = EmpresaId,
+                                Tipo = TipoParticipante.Cliente,
+                                Nome = documento?.NFe?.infNFe?.dest?.xNome,
+                                Documento = CPfCNPJ,
+                            };
+
+                            await _unitOfWork.Repository<Participante>().AddAsync(participante);
+                        }
                     }
 
                     // 1. Documento_fiscal
@@ -117,7 +127,7 @@ namespace rh.financeiro.Services.Services.Jobs
                         Numero = documento?.NFe?.infNFe?.ide?.nNF,
                         Serie = documento?.NFe?.infNFe?.ide?.serie,
                         Chave = DocumentoChaveAcesso,
-                        ParticipanteId = participante != null ? participante.Id : null,
+                        ParticipanteId = participante?.Id,
                         DataEmissao = documento?.NFe?.infNFe?.ide?.dhEmi,
                         ValorTotal = documento?.NFe?.infNFe?.det?.Sum(x => x.prod?.vProd),
                         DadosTributarios = JsonSerializer.Serialize(documento),

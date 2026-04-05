@@ -228,18 +228,29 @@ namespace rh.financeiro.Services.Services.DocumentoFiscais
                 // 5. Participante
                 Participante participante = null;
 
+                // Caso tenha informacoes do consumidor, cria um participante
                 if (documento?.NFe?.infNFe?.dest != null)
                 {
-                    participante = new Participante()
-                    {
-                        EmpresaId = EmpresaId,
-                        Tipo = TipoParticipante.Cliente,
-                        Nome = documento?.NFe?.infNFe?.dest?.xNome,
-                        Documento = documento?.NFe?.infNFe?.dest?.CPF ??
-                                    documento?.NFe?.infNFe?.dest?.CNPJ,
-                    };
+                    string CPfCNPJ = documento?.NFe?.infNFe?.dest?.CPF ?? documento?.NFe?.infNFe?.dest?.CNPJ;
 
-                    await _unitOfWork.Repository<Participante>().AddAsync(participante);
+                    // Verificar se ja existe na base
+                    bool ExisteParticipante = await _unitOfWork.Repository<Participante>()
+                        .QueryableObject()
+                        .AnyAsync(x => x.Documento == CPfCNPJ);
+
+                    // Se nao existe, cria!
+                    if (!ExisteParticipante)
+                    {
+                        participante = new Participante()
+                        {
+                            EmpresaId = EmpresaId,
+                            Tipo = TipoParticipante.Cliente,
+                            Nome = documento?.NFe?.infNFe?.dest?.xNome,
+                            Documento = CPfCNPJ,
+                        };
+
+                        await _unitOfWork.Repository<Participante>().AddAsync(participante);
+                    }
                 }
 
                 // 6. Documento Fiscal
