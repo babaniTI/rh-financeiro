@@ -1,33 +1,31 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using rh.financeiro.CrossCuting;
 using rh.financeiro.Domain.Common.Http.Response;
-using rh.financeiro.Domain.Dto.Request.ContasFinanceiras.BuscarContasFinanceiras;
-using rh.financeiro.Domain.Dto.Request.DocumentoFiscal.BuscarDocumentosFiscais;
+using rh.financeiro.Domain.Dto.Request.MovimentacaoBancaria.BuscarMovimentacoesBancarias;
 using rh.financeiro.Domain.Enums;
-using rh.financeiro.Domain.Interfaces.Service.ContaFinanceiras;
-using rh.financeiro.Domain.Interfaces.Service.DocumentoFiscal;
+using rh.financeiro.Domain.Interfaces.Service.MovimentacaoBancaria;
 
-namespace rh.financeiro.webservice.Controllers.DocumentoFiscal
+namespace rh.financeiro.webservice.Controllers.MovimentacaoBancaria
 {
     [ApiController]
     [Route("[controller]")]
-    public class DocumentoFiscalController : ControllerBase
+    public class MovimentacaoBancariaController : ControllerBase
     {
-        private readonly IDocumentoFiscalService _documentoFiscalService;
+        private readonly IMovimentacaoBancariaService _movimentacaoBancariaService;
 
-        public DocumentoFiscalController(IDocumentoFiscalService documentoFiscalService)
+        public MovimentacaoBancariaController(IMovimentacaoBancariaService movimentacaoBancariaService)
         {
-            _documentoFiscalService = documentoFiscalService;
+            _movimentacaoBancariaService = movimentacaoBancariaService;
         }
 
         [HttpGet()]
-        public async Task<ActionResult<ResponseApi>> BuscarDocumentosFiscais([FromQuery] BuscarDocumentosFiscaisRequest request)
+        public async Task<ActionResult<ResponseApi>> BuscarMovimentacoesBancarias([FromQuery] BuscarMovimentacoesBancariasRequest request)
         {
             #region Consistencias
             if (request is null)
             {
                 return StatusCode((int)ReturnStatus.BadRequest, ResponseApi.FormatResponse(ReturnStatus.BadRequest, ReturnCodes.EmptyRequest, false,
-                    $"Validations BuscarDocumentosFiscais: {Utils.GetEnumDescription(ReturnCodes.EmptyRequest)}"));
+                    $"Validations BuscarMovimentacoesBancariasRequest: {Utils.GetEnumDescription(ReturnCodes.EmptyRequest)}"));
             }
             #endregion
 
@@ -35,16 +33,16 @@ namespace rh.financeiro.webservice.Controllers.DocumentoFiscal
             try
             {
                 string UsuarioId = Utils.GetUserId(HttpContext);
-                var response = await _documentoFiscalService.BuscarDocumentosFiscais(request, UsuarioId);
+                var response = await _movimentacaoBancariaService.BuscarMovimentacoesBancarias(request, UsuarioId);
 
                 if (response.total == 0)
                 {
                     return StatusCode((int)ReturnStatus.BadRequest, ResponseApi.FormatResponse(ReturnStatus.BadRequest, ReturnCodes.EmptyRequest, false,
-                        "Documentos Fiscais não encontrados", null));
+                        "Movimentacoes Bancarias não encontrados", null));
                 }
 
                 return StatusCode((int)ReturnStatus.Ok, ResponseApi.FormatResponse(ReturnStatus.Ok, ReturnCodes.Ok, true,
-                    "Documentos Fiscais encontrados com sucsso", response));
+                    "Movimentacoes Bancarias encontrados com sucsso", response));
             }
             catch (Exception ex)
             {
@@ -60,24 +58,24 @@ namespace rh.financeiro.webservice.Controllers.DocumentoFiscal
             #endregion
         }
 
-        [HttpPost("xml/importar")]
+        [HttpPost("ofx/importar")]
         [Consumes("multipart/form-data")]
-        public async Task<ActionResult<ResponseApi>> ImportarDocumentoFiscalXml(IFormFile file)
+        public async Task<ActionResult<ResponseApi>> ImportarMovimentacaoBancariaOfx(IFormFile file)
         {
             #region Consistencias
             if (file == null || file.Length == 0)
             {
                 return StatusCode((int)ReturnStatus.BadRequest,
                     ResponseApi.FormatResponse(ReturnStatus.BadRequest, ReturnCodes.EmptyRequest, false,
-                    "Arquivo XML não informado"));
+                    "Arquivo OFX não informado"));
             }
 
             var extensao = Path.GetExtension(file.FileName).ToLower();
-            if (extensao != ".xml")
+            if (extensao != ".ofx")
             {
                 return StatusCode((int)ReturnStatus.BadRequest,
                     ResponseApi.FormatResponse(ReturnStatus.BadRequest, ReturnCodes.InvalidValue, false,
-                    "Arquivo deve ser do tipo XML"));
+                    "Arquivo deve ser do tipo OFX"));
             }
             #endregion
 
@@ -91,18 +89,18 @@ namespace rh.financeiro.webservice.Controllers.DocumentoFiscal
                     xmlContent = await reader.ReadToEndAsync();
                 }
 
-                bool success = await _documentoFiscalService.ImportarDocumentoFiscalXml(UsuarioId, xmlContent);
+                bool success = await _movimentacaoBancariaService.ImportarOfx(UsuarioId, xmlContent);
 
                 if (!success)
                 {
                     return StatusCode((int)ReturnStatus.BadRequest,
                         ResponseApi.FormatResponse(ReturnStatus.BadRequest, ReturnCodes.EmptyRequest, false,
-                        "Xml invalido"));
+                        "OFX invalido e/ou Conta financeira não encontrada"));
                 }
 
                 return StatusCode((int)ReturnStatus.Created,
                     ResponseApi.FormatResponse(ReturnStatus.Created, ReturnCodes.Ok, true,
-                    "Xml da Nota importado com sucesso"));
+                    "Movimentacao bancaria importado com sucesso"));
             }
             catch (Exception ex)
             {

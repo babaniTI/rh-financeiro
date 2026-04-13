@@ -8,22 +8,27 @@ using rh.financeiro.Data.Repository;
 using rh.financeiro.Domain.Interfaces.Repository;
 using rh.financeiro.Domain.Interfaces.Service.Auth;
 using rh.financeiro.Domain.Interfaces.Service.CategoriaFinanceiras;
+using rh.financeiro.Domain.Interfaces.Service.Conciliacao;
 using rh.financeiro.Domain.Interfaces.Service.ContaFinanceiras;
 using rh.financeiro.Domain.Interfaces.Service.DocumentoFiscal;
 using rh.financeiro.Domain.Interfaces.Service.Jobs;
+using rh.financeiro.Domain.Interfaces.Service.MovimentacaoBancaria;
 using rh.financeiro.Domain.Interfaces.Service.Nfe;
 using rh.financeiro.Domain.Interfaces.Service.Participantes;
 using rh.financeiro.Domain.Interfaces.Service.Titulo;
 using rh.financeiro.Domain.Interfaces.UnitOfWorks;
 using rh.financeiro.Services.Services.Auth;
 using rh.financeiro.Services.Services.CategoriaFinanceiras;
+using rh.financeiro.Services.Services.Conciliacao;
 using rh.financeiro.Services.Services.ContasFinanceiras;
 using rh.financeiro.Services.Services.DocumentoFiscais;
 using rh.financeiro.Services.Services.Jobs;
+using rh.financeiro.Services.Services.MovimentacaoBancaria;
 using rh.financeiro.Services.Services.Nfe;
 using rh.financeiro.Services.Services.Participantes;
 using rh.financeiro.Services.Services.Titulos;
 using System.Text;
+using System.Text.Json.Serialization;
 
 var builder = WebApplication.CreateBuilder(args);
 string environmentName = Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT") ?? "Default";
@@ -49,6 +54,13 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
+builder.Services
+    .AddControllers()
+    .AddJsonOptions(options =>
+    {
+        options.JsonSerializerOptions.Converters.Add(new JsonStringEnumConverter());
+    });
 
 // Swagger + JWT
 builder.Services.AddSwaggerGen(c =>
@@ -105,6 +117,7 @@ builder.Services.AddDbContext<DefaultContext>(options =>
 
 
 
+
 builder.Services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
 builder.Services.AddScoped(typeof(IUnitOfWork<>), typeof(UnitOfWork<>));
 builder.Services.AddScoped<IAuthService, AuthService>();
@@ -115,6 +128,9 @@ builder.Services.AddScoped<IContasFinanceirasService, ContasFinanceirasService>(
 builder.Services.AddScoped<INfeService, NfeService>();
 builder.Services.AddScoped<IDocumentoFiscalService, DocumentoFiscalService>();
 builder.Services.AddScoped<ITituloService, TituloService>();
+builder.Services.AddScoped<IMovimentacaoBancariaService, MovimentacaoBancariaService>();
+builder.Services.AddScoped<IConciliacaoService, ConciliacaoService>();
+
 
 
 var app = builder.Build();

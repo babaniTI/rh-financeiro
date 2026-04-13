@@ -13,6 +13,8 @@ namespace rh.financeiro.Domain.Entities
     public class MovimentoBancario
     {
         [Key]
+        [Column("id")]
+
         public Guid Id { get; set; }
 
         [Column("conta_id")]
@@ -23,6 +25,9 @@ namespace rh.financeiro.Domain.Entities
 
         [Column("tipo")]
         public TipoMovimento Tipo { get; set; }
+
+        [Column("status")]
+        public StatusMovimento Status { get; set; }
 
         [Column("valor_bruto")]
         public decimal? ValorBruto { get; set; }
@@ -46,6 +51,6 @@ namespace rh.financeiro.Domain.Entities
         public string hashUnico { get; set; }
 
         [Column("created_at")]
-        public DateTime createdAt { get; set; }
+        public DateTime createdAt { get; set; } = DateTime.Now.ToUniversalTime();
     }
 }

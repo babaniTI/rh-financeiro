@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.Json;
+using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 
 namespace rh.financeiro.Domain.Common.DocumentosNfes
@@ -20,11 +22,14 @@ namespace rh.financeiro.Domain.Common.DocumentosNfes
 
     public class InfNFe
     {
+        [JsonPropertyName("@Id")]
         public string? Id { get; set; }
         public string? versao { get; set; }
         public Ide? ide { get; set; }
         public Emit? emit { get; set; }
         public Dest dest { get; set; }
+
+        [JsonConverter(typeof(SingleOrArrayConverter<Det>))]
         public List<Det>? det { get; set; }
         public Pag? pag { get; set; }
         public Total? total { get; set; }
@@ -89,15 +94,15 @@ namespace rh.financeiro.Domain.Common.DocumentosNfes
     {
         public string? cProd { get; set; }
         public string? xProd { get; set; }
-        public decimal? qCom { get; set; }
-        public decimal? vProd { get; set; }
+        public string? qCom { get; set; }
+        public string? vProd { get; set; }
         public string? NCM { get; set; }
         public string? CFOP { get; set; }
     }
 
     public class Imposto
     {
-        public decimal? vTotTrib { get; set; }
+        public string? vTotTrib { get; set; }
         public ICMS? ICMS { get; set; }
         public PIS? PIS { get; set; }
         public COFINS? COFINS { get; set; }
@@ -111,7 +116,7 @@ namespace rh.financeiro.Domain.Common.DocumentosNfes
 
     public class ICMS20
     {
-        public decimal? vICMS { get; set; }
+        public string? vICMS { get; set; }
     }
 
     public class PIS
@@ -121,7 +126,7 @@ namespace rh.financeiro.Domain.Common.DocumentosNfes
 
     public class PISAliq
     {
-        public decimal? vPIS { get; set; }
+        public string? vPIS { get; set; }
     }
 
     public class COFINS
@@ -131,7 +136,7 @@ namespace rh.financeiro.Domain.Common.DocumentosNfes
 
     public class COFINSAliq
     {
-        public decimal? vCOFINS { get; set; }
+        public string? vCOFINS { get; set; }
     }
 
     public class IBSCBS
@@ -141,7 +146,7 @@ namespace rh.financeiro.Domain.Common.DocumentosNfes
 
     public class GIBSCBS
     {
-        public decimal? vBC { get; set; }
+        public string? vBC { get; set; }
         public GIBSUF? gIBSUF { get; set; }
         public GIBSMUN? GIBSMun { get; set; }
 
@@ -150,22 +155,22 @@ namespace rh.financeiro.Domain.Common.DocumentosNfes
 
     public class GCBS
     {
-        public decimal? vCBS { get; set; }
-        public decimal? pCBS { get; set; }
+        public string? vCBS { get; set; }
+        public string? pCBS { get; set; }
 
     }
 
     public class GIBSUF
     {
-        public decimal? pIBSUF { get; set; }
-        public decimal? vIBSUF { get; set; }
+        public string? pIBSUF { get; set; }
+        public string? vIBSUF { get; set; }
 
     }
 
     public class GIBSMUN
     {
-        public decimal? pIBSMun { get; set; }
-        public decimal? vIBSMun { get; set; }
+        public string? pIBSMun { get; set; }
+        public string? vIBSMun { get; set; }
     }
 
     public class Total
@@ -176,7 +181,7 @@ namespace rh.financeiro.Domain.Common.DocumentosNfes
 
     public class ICMSTot
     {
-        public decimal? vNF { get; set; }
+        public string? vNF { get; set; }
     }
 
     public class IBSCBSTot
@@ -187,17 +192,18 @@ namespace rh.financeiro.Domain.Common.DocumentosNfes
 
     public class GIBS
     {
-        public decimal? vIBS { get; set; }
+        public string? vIBS { get; set; }
     }
 
     public class Pag
     {
-        public List<DetPag> detpag { get; set; }
+        [JsonConverter(typeof(SingleOrArrayConverter<DetPag>))]
+        public List<DetPag> detPag { get; set; }
     }
     public class DetPag
     {
         public string? tPag { get; set; }
-        public decimal? vPag { get; set; }
+        public string? vPag { get; set; }
     }
 
     public class ProtNFe
@@ -210,5 +216,30 @@ namespace rh.financeiro.Domain.Common.DocumentosNfes
         public string? chNFe { get; set; }
         public string? cStat { get; set; }
         public string? xMotivo { get; set; }
+    }
+
+    public class SingleOrArrayConverter<T> : JsonConverter<List<T>>
+    {
+        public override List<T> Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
+        {
+            var list = new List<T>();
+
+            if (reader.TokenType == JsonTokenType.StartArray)
+            {
+                list = JsonSerializer.Deserialize<List<T>>(ref reader, options);
+            }
+            else
+            {
+                var item = JsonSerializer.Deserialize<T>(ref reader, options);
+                list.Add(item);
+            }
+
+            return list;
+        }
+
+        public override void Write(Utf8JsonWriter writer, List<T> value, JsonSerializerOptions options)
+        {
+            JsonSerializer.Serialize(writer, value, options);
+        }
     }
 }

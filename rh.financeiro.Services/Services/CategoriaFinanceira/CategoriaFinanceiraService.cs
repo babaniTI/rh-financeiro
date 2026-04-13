@@ -107,8 +107,9 @@ namespace rh.financeiro.Services.Services.CategoriaFinanceiras
                 // Filtro por tipo
                 if (request.tipo != null)
                 {
+                    var tipoEnum = Enum.Parse<TipoCategoriaFinanceira>(request.tipo, true);
                     queryCategoriaFinanceira = queryCategoriaFinanceira
-                        .Where(x => x.Tipo.ToString() == request.tipo);
+                        .Where(x => x.Tipo == tipoEnum);
                 }
 
                 // Filtrar por ativo

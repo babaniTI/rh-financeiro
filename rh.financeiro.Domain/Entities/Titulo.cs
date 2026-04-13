@@ -41,6 +41,6 @@ namespace rh.financeiro.Domain.Entities
         public StatusTitulo Status { get; set; }
 
         [Column("created_at")]
-        public DateTime? CreatedAt { get; set; }
+        public DateTime? CreatedAt { get; set; } = DateTime.Now.ToUniversalTime();
     }
 }

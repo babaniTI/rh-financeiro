@@ -9,6 +9,7 @@ namespace rh.financeiro.Data.Context.Default
 {
     using Microsoft.EntityFrameworkCore;
     using rh.financeiro.Domain.Entities;
+    using rh.financeiro.Domain.Enums;
 
     public class DefaultContext : DbContext
     {
@@ -49,57 +50,109 @@ namespace rh.financeiro.Data.Context.Default
             // ENUM → STRING
             // =========================
 
+            // Participante
             modelBuilder.Entity<Participante>()
                 .Property(x => x.Tipo)
-                .HasConversion<string>();
+                .HasConversion(
+                    v => v.ToDbString(),
+                    v => v.ToEnum<TipoParticipante>()
+                );
 
+            // ContaFinanceira
             modelBuilder.Entity<ContaFinanceira>()
                 .Property(x => x.Tipo)
-                .HasConversion<string>();
+                .HasConversion(
+                    v => v.ToDbString(),
+                    v => v.ToEnum<TipoConta>()
+                );
 
+            // DocumentoFiscal - Tipo
             modelBuilder.Entity<DocumentoFiscal>()
                 .Property(x => x.Tipo)
-                .HasConversion<string>();
+                .HasConversion(
+                    v => v.ToDbString(),
+                    v => v.ToEnum<TipoDocumentoFiscal>()
+                );
 
+            // DocumentoFiscal - Status
             modelBuilder.Entity<DocumentoFiscal>()
-                .Property(x => x.status)
-                .HasConversion<string>();
+                .Property(x => x.status) // ⚠️ Atenção: C# é case-sensitive (era 'status' minúsculo)
+                .HasConversion(
+                    v => v.ToDbString(),
+                    v => v.ToEnum<TipoStatusDocumentoFiscal>()
+                );
 
+            // CategoriaFinanceira
             modelBuilder.Entity<CategoriaFinanceira>()
                 .Property(x => x.Tipo)
-                .HasConversion<string>();
+                .HasConversion(
+                    v => v.ToDbString(),
+                    v => v.ToEnum<TipoCategoriaFinanceira>()
+                );
 
+            // Titulo - Tipo
             modelBuilder.Entity<Titulo>()
                 .Property(x => x.Tipo)
-                .HasConversion<string>();
+                .HasConversion(
+                    v => v.ToDbString(),
+                    v => v.ToEnum<TipoTitulo>()
+                );
 
+            // Titulo - Status
             modelBuilder.Entity<Titulo>()
                 .Property(x => x.Status)
-                .HasConversion<string>();
+                .HasConversion(
+                    v => v.ToDbString(),
+                    v => v.ToEnum<StatusTitulo>()
+                );
 
+            // Parcela
             modelBuilder.Entity<Parcela>()
                 .Property(x => x.Status)
-                .HasConversion<string>();
+                .HasConversion(
+                    v => v.ToDbString(),
+                    v => v.ToEnum<StatusParcela>()
+                );
 
+            // MovimentoBancario
             modelBuilder.Entity<MovimentoBancario>()
                 .Property(x => x.Tipo)
-                .HasConversion<string>();
+                .HasConversion(
+                    v => v.ToDbString(),
+                    v => v.ToEnum<TipoMovimento>()
+                );
 
+            // Conciliacao
             modelBuilder.Entity<Conciliacao>()
                 .Property(x => x.Tipo)
-                .HasConversion<string>();
+                .HasConversion(
+                    v => v.ToDbString(),
+                    v => v.ToEnum<TipoConciliacao>()
+                );
 
+            // TributoItem
             modelBuilder.Entity<TributoItem>()
                 .Property(x => x.Tipo)
-                .HasConversion<string>();
+                .HasConversion(
+                    v => v.ToDbString(),
+                    v => v.ToEnum<TipoTributo>()
+                );
 
+            // EventoFinanceiro
             modelBuilder.Entity<EventoFinanceiro>()
                 .Property(x => x.Tipo)
-                .HasConversion<string>();
+                .HasConversion(
+                    v => v.ToDbString(),
+                    v => v.ToEnum<TipoEventoFinanceiro>()
+                );
 
+            // LiquidacaoFinanceira
             modelBuilder.Entity<LiquidacaoFinanceira>()
                 .Property(x => x.Tipo)
-                .HasConversion<string>();
+                .HasConversion(
+                    v => v.ToDbString(),
+                    v => v.ToEnum<TipoLiquidacao>()
+                );
 
             // =========================
             // AJUSTES IMPORTANTES

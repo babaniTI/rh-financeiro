@@ -13,6 +13,7 @@ using rh.financeiro.Domain.Interfaces.Service.DocumentoFiscal;
 using rh.financeiro.Domain.Interfaces.UnitOfWorks;
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Text.Json;
@@ -67,10 +68,17 @@ namespace rh.financeiro.Services.Services.DocumentoFiscais
             try
             {
                 if (!string.IsNullOrEmpty(request.tipo))
-                    query = query.Where(x => x.Documento.Tipo.ToString() == request.tipo);
+                {
+                    var tipoEnum = Enum.Parse<TipoDocumentoFiscal>(request.tipo, true);
+                    query = query.Where(x => x.Documento.Tipo == tipoEnum);
+                }
 
                 if (!string.IsNullOrEmpty(request.status))
-                    query = query.Where(x => x.Documento.status.ToString() == request.status);
+                {
+                    var statusEnum = Enum.Parse<TipoStatusDocumentoFiscal>(request.status, true);
+                    query = query.Where(x => x.Documento.status == statusEnum);
+
+                }
 
                 #region Filtro por Data de Emissão (ISO 8601)
                 DateTimeOffset? dataInicio = string.IsNullOrEmpty(request.dataEmissaoInicio)
@@ -136,7 +144,7 @@ namespace rh.financeiro.Services.Services.DocumentoFiscais
                     CreatedAt = x.Documento.Created_at,
                     UpdatedAt = x.Documento.Updated_at,
                     ValorProdutos = x.Itens.Sum(i => i.Item.ValorTotal),
-                    ValorTotal = x.Itens.Sum(i => i.Item.ValorTotal),
+                    ValorTotal = x.Documento.ValorTotal,
                     Itens = x.Itens
                         .Select((item, index) => new ItemDocumentoFiscal
                         {
@@ -260,14 +268,13 @@ namespace rh.financeiro.Services.Services.DocumentoFiscais
                     Tipo = documento?.NFe?.infNFe?.ide?.mod == "65"
                         ? TipoDocumentoFiscal.NFCE
                         : TipoDocumentoFiscal.NFE,
-
                     Numero = documento?.NFe?.infNFe?.ide?.nNF,
                     Serie = documento?.NFe?.infNFe?.ide?.serie,
                     Chave = DocumentoChaveAcesso,
                     ParticipanteId = participante?.Id,
                     DataEmissao = documento?.NFe?.infNFe?.ide?.dhEmi,
 
-                    ValorTotal = documento?.NFe?.infNFe?.det?.Sum(x => x.prod?.vProd),
+                    ValorTotal = ParseDecimal(documento?.NFe?.infNFe?.total?.ICMSTot?.vNF),
 
                     DadosTributarios = json,
 
@@ -287,6 +294,9 @@ namespace rh.financeiro.Services.Services.DocumentoFiscais
 
                 foreach (var item in itens)
                 {
+                    decimal? Quantidade = ParseDecimal(item?.prod?.qCom);
+                    decimal? ValorProd = ParseDecimal(item?.prod?.vProd);
+
                     var DocumentoItem = new DocumentoFiscalItem()
                     {
                         DocumentoId = DocumentoFiscal.Id,
@@ -294,9 +304,9 @@ namespace rh.financeiro.Services.Services.DocumentoFiscais
                         Descricao = item?.prod?.xProd,
                         Ncm = item?.prod?.NCM,
                         Cfop = item?.prod?.CFOP,
-                        Quantidade = item?.prod?.qCom,
-                        ValorUnitario = item?.prod?.vProd / item?.prod?.qCom,
-                        ValorTotal = item?.prod?.vProd,
+                        Quantidade = Quantidade,
+                        ValorUnitario = ValorProd / Quantidade,
+                        ValorTotal = ValorProd,
                     };
 
                     documentoFiscalItems.Add(DocumentoItem);
@@ -309,9 +319,11 @@ namespace rh.financeiro.Services.Services.DocumentoFiscais
 
                 foreach (var item in itens)
                 {
+                    decimal? ValorProd = ParseDecimal(item?.prod?.vProd);
+
                     var documentoItem = documentoFiscalItems.FirstOrDefault(x =>
                         x.ProdutoCodigo == item?.prod?.cProd &&
-                        x.ValorTotal == item?.prod?.vProd
+                        x.ValorTotal == ValorProd
                     );
 
                     if (documentoItem == null) continue;
@@ -325,9 +337,9 @@ namespace rh.financeiro.Services.Services.DocumentoFiscais
                         {
                             ItemId = documentoItem.Id,
                             Tipo = TipoTributo.CBS,
-                            Base = ibsCbs?.vBC,
-                            Aliquota = ibsCbs?.gCBS?.pCBS,
-                            Valor = ibsCbs?.gCBS?.vCBS,
+                            Base = ParseDecimal(ibsCbs?.vBC),
+                            Aliquota = ParseDecimal(ibsCbs?.gCBS?.pCBS),
+                            Valor = ParseDecimal(ibsCbs?.gCBS?.vCBS),
                         });
 
                         // IBS
@@ -335,22 +347,25 @@ namespace rh.financeiro.Services.Services.DocumentoFiscais
                         {
                             ItemId = documentoItem.Id,
                             Tipo = TipoTributo.IBS,
-                            Base = ibsCbs?.vBC,
+                            Base = Convert.ToDecimal(ibsCbs?.vBC),
                             Aliquota =
-                                (ibsCbs?.gIBSUF?.pIBSUF ?? 0) +
-                                (ibsCbs?.GIBSMun?.pIBSMun ?? 0),
+                            (ibsCbs?.gIBSUF?.pIBSUF != null ? ParseDecimal(ibsCbs.gIBSUF.pIBSUF) : 0m) +
+                            (ibsCbs?.GIBSMun?.pIBSMun != null ? ParseDecimal(ibsCbs.GIBSMun.pIBSMun) : 0m),
 
                             Valor =
-                                (ibsCbs?.gIBSUF?.vIBSUF ?? 0) +
-                                (ibsCbs?.GIBSMun?.vIBSMun ?? 0),
+                            (ibsCbs?.gIBSUF?.vIBSUF != null ? ParseDecimal(ibsCbs.gIBSUF.vIBSUF) : 0m) +
+                            (ibsCbs?.GIBSMun?.vIBSMun != null ? ParseDecimal(ibsCbs.GIBSMun.vIBSMun) : 0m),
                         });
                     }
                 }
 
                 await _unitOfWork.Repository<TributoItem>().AddRangeAsync(TributoItems);
 
+                string? cfop = itens.First()?.prod?.CFOP;
+                if (cfop == "3102") // Se o CFOP é 3102 ( Nota de entrada de mercadoria), não gera titulos e parcelas, pois não é para conciliar isso!
+                    return true;
+
                 // 9. Titulo
-                string cfop = itens.First()?.prod?.CFOP;
                 Guid CategoriaFinanceiraId = await BuscarCategoriaIdPorCfop(cfop);
                 var Titulo = new Titulo()
                 {
@@ -361,7 +376,7 @@ namespace rh.financeiro.Services.Services.DocumentoFiscais
                     DocumentoId = DocumentoFiscal.Id,
                     ParticipanteId = DocumentoFiscal.ParticipanteId,
                     CategoriaId = CategoriaFinanceiraId,
-                    ValorTotal = (decimal)DocumentoFiscal.ValorTotal!,
+                    ValorTotal = ParseDecimal(documento?.NFe?.infNFe?.total?.ICMSTot?.vNF),
                     DataEmissao = DocumentoFiscal.DataEmissao,
                     Status = ClassificarStatusTitulo(documento, NotaStatus)
                 };
@@ -369,55 +384,27 @@ namespace rh.financeiro.Services.Services.DocumentoFiscais
                 await _unitOfWork.Repository<Titulo>().AddAsync(Titulo);
 
                 // 10. Parcelas
-                var parcelas = documento?.NFe?.infNFe?.pag?.detpag ?? new List<DetPag>();
+                var parcelas = documento?.NFe?.infNFe?.pag?.detPag ?? new List<DetPag>();
 
                 var parcelasBanco = new List<Parcela>();
 
                 int numeroParcela = 1;
-                int parcelaCartaoCredito = 0;
-
                 foreach (var parcela in parcelas)
                 {
                     var meioPagamento = (MeioPagamentoSefaz)Convert.ToInt32(parcela.tPag);
-
+                    decimal? ValorPago = ParseDecimal(parcela.vPag);
                     Parcela parcelaBanco;
 
-                    if (meioPagamento == MeioPagamentoSefaz.CartaoCredito)
+                    parcelaBanco = new Parcela()
                     {
-                        parcelaCartaoCredito++;
-
-                        var (Status, DataVencimento) =
-                            BuscarDataVencimentoAndStatusParcela(
-                                parcela,
-                                (DateTime)Titulo.DataEmissao!,
-                                NotaStatus,
-                                parcelaCartaoCredito
-                            );
-
-                        parcelaBanco = new Parcela()
-                        {
-                            TituloId = Titulo.Id,
-                            Numero = numeroParcela,
-                            DataVencimento = DataVencimento,
-                            Valor = parcela.vPag,
-                            Saldo = Status == StatusParcela.Pago ? parcela.vPag : 0,
-                            Status = Status,
-                            DescricaoPagamento = $"{meioPagamento} - {parcelaCartaoCredito}"
-                        };
-                    }
-                    else
-                    {
-                        parcelaBanco = new Parcela()
-                        {
-                            TituloId = Titulo.Id,
-                            Numero = numeroParcela,
-                            DataVencimento = DocumentoFiscal.DataEmissao,
-                            Valor = parcela.vPag,
-                            Saldo = parcela.vPag,
-                            Status = StatusParcela.Pago,
-                            DescricaoPagamento = meioPagamento.ToString()
-                        };
-                    }
+                        TituloId = Titulo.Id,
+                        Numero = numeroParcela,
+                        DataVencimento = DocumentoFiscal.DataEmissao,
+                        Valor = ValorPago,
+                        Saldo = 0m,
+                        Status = Titulo.Status == StatusTitulo.Cancelado ? StatusParcela.Cancelado : StatusParcela.Aberto,
+                        DescricaoPagamento = meioPagamento.ToString()
+                    };
 
                     parcelasBanco.Add(parcelaBanco);
                     numeroParcela++;
@@ -461,23 +448,10 @@ namespace rh.financeiro.Services.Services.DocumentoFiscais
         private StatusTitulo ClassificarStatusTitulo(NfeProc documento, string NotaStatus)
         {
             #region Fields
-            List<DetPag>? Pagamentos = documento?.NFe?.infNFe?.pag?.detpag;
+            List<DetPag>? Pagamentos = documento?.NFe?.infNFe?.pag?.detPag;
 
             if (Pagamentos == null || !Pagamentos.Any())
                 return StatusTitulo.Aberto;
-
-            List<MeioPagamentoSefaz> MeiosAbertos = new List<MeioPagamentoSefaz> {
-                MeioPagamentoSefaz.Cheque,
-                MeioPagamentoSefaz.BoletoBancario,
-                MeioPagamentoSefaz.SemPagamento
-            };
-
-            List<MeioPagamentoSefaz> MeiosAVista = new List<MeioPagamentoSefaz> {
-                MeioPagamentoSefaz.Dinheiro,
-                MeioPagamentoSefaz.Pix,
-                MeioPagamentoSefaz.CartaoDebito,
-                MeioPagamentoSefaz.TransferenciaBancaria,
-            };
             #endregion
 
             #region Logic
@@ -485,66 +459,6 @@ namespace rh.financeiro.Services.Services.DocumentoFiscais
             {
                 if (NotaStatus == "C")
                     return StatusTitulo.Cancelado;
-
-                var meiosConvertidos = Pagamentos
-                    .Select(x =>
-                    {
-                        if (int.TryParse(x.tPag, out int tPagInt) &&
-                            Enum.IsDefined(typeof(MeioPagamentoSefaz), tPagInt))
-                        {
-                            return (MeioPagamentoSefaz)tPagInt;
-                        }
-                        return (MeioPagamentoSefaz?)null;
-                    })
-                    .Where(x => x.HasValue)
-                    .Select(x => x.Value)
-                    .ToList();
-
-                bool temAberto = false;
-                bool temQuitado = false;
-
-                foreach (var meio in meiosConvertidos)
-                {
-                    // 🔴 meios já conhecidos como "a prazo"
-                    if (MeiosAbertos.Contains(meio))
-                    {
-                        temAberto = true;
-                        continue;
-                    }
-
-                    // 🔴 cartão de crédito (regra especial)
-                    if (meio == MeioPagamentoSefaz.CartaoCredito)
-                    {
-                        var NumeroparcelasCartao = Pagamentos
-                            .Where(x => x.tPag == "3")
-                            .Count();
-
-                        // Se tiver mais de um pagamento → assume parcelado
-                        if (NumeroparcelasCartao > 1)
-                            temAberto = true;
-                        else
-                            temQuitado = true;
-
-                        continue;
-                    }
-
-                    // 🔴 meios à vista
-                    if (MeiosAVista.Contains(meio))
-                    {
-                        temQuitado = true;
-                        continue;
-                    }
-                }
-
-                // 🔥 decisão final
-                if (temAberto && temQuitado)
-                    return StatusTitulo.Parcial;
-
-                if (temAberto)
-                    return StatusTitulo.Aberto;
-
-                if (temQuitado)
-                    return StatusTitulo.Quitado;
 
                 return StatusTitulo.Aberto;
             }
@@ -608,6 +522,13 @@ namespace rh.financeiro.Services.Services.DocumentoFiscais
             }
             #endregion
 
+        }
+        private decimal ParseDecimal(string? value)
+        {
+            if (decimal.TryParse(value, NumberStyles.Any, CultureInfo.InvariantCulture, out var result))
+                return result;
+
+            return 0m; // ou null se quiser usar decimal?
         }
         #endregion
     }

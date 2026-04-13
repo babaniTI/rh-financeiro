@@ -15,6 +15,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static Microsoft.EntityFrameworkCore.DbLoggerCategory;
 
 namespace rh.financeiro.Services.Services.Participantes
 {
@@ -94,10 +95,10 @@ namespace rh.financeiro.Services.Services.Participantes
                     .Where(x => x.EmpresaId.ToString() == EmpresaId.ToString());
 
                 // Filtro por tipo
-                if (request.tipo.HasValue)
+                if (!string.IsNullOrEmpty(request.tipo))
                 {
-                    queryParticipantes = queryParticipantes
-                        .Where(x => x.Tipo == request.tipo.Value);
+                    var tipoEnum = Enum.Parse<TipoParticipante>(request.tipo, true);
+                    queryParticipantes = queryParticipantes.Where(x => x.Tipo == tipoEnum);
                 }
 
                 // Filtro por busca

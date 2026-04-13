@@ -13,6 +13,7 @@ namespace rh.financeiro.Domain.Entities
     public class ContaFinanceira
     {
         [Key]
+        [Column("id")]
         public Guid Id { get; set; }
 
         [Column("empresa_id")]
@@ -40,9 +41,9 @@ namespace rh.financeiro.Domain.Entities
         public bool Ativo { get; set; }
 
         [Column("created_at")]
-        public DateTime CreatedAt { get; set; }
+        public DateTime CreatedAt { get; set; } = DateTime.Now.ToUniversalTime();
 
         [Column("updated_at")]
-        public DateTime UpdatedAt { get; set; }
+        public DateTime UpdatedAt { get; set; } = DateTime.Now.ToUniversalTime();
     }
 }

@@ -149,7 +149,7 @@ namespace rh.financeiro.CrossCuting
         {
             var authHeader = httpContext.Request.Headers["Authorization"].FirstOrDefault();
 
-            if (string.IsNullOrEmpty(authHeader) || !authHeader.StartsWith("Bearer "))
+            if (string.IsNullOrEmpty(authHeader) || !authHeader.StartsWith("Bearer ") || authHeader.Contains("undefined"))
                 return null;
 
             var token = authHeader.Replace("Bearer ", "").Trim();

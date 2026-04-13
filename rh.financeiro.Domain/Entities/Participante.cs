@@ -23,15 +23,15 @@ namespace rh.financeiro.Domain.Entities
         public TipoParticipante Tipo { get; set; }
 
         [Column("nome")]
-        public string Nome { get; set; }
+        public string? Nome { get; set; }
 
         [Column("documento")]
-        public string Documento { get; set; }
+        public string? Documento { get; set; }
 
         [Column("created_at")]
-        public DateTime CreatedAt { get; set; }
+        public DateTime CreatedAt { get; set; } = DateTime.Now.ToUniversalTime();
 
         [Column("updated_at")]
-        public DateTime UpdatedAt { get; set; }
+        public DateTime UpdatedAt { get; set; } = DateTime.Now.ToUniversalTime();
     }
 }

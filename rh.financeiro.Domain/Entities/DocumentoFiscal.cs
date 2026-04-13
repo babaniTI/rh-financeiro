@@ -48,12 +48,12 @@ namespace rh.financeiro.Domain.Entities
         public TipoStatusDocumentoFiscal status { get; set; }
 
         [Column("declaracao_importacao_id")]
-        public string? DeclaracaoImportacaoId { get; set; }
+        public Guid? DeclaracaoImportacaoId { get; set; }
 
         [Column("created_at")]
-        public DateTime Created_at { get; set; }
+        public DateTime Created_at { get; set; } = DateTime.Now.ToUniversalTime();
 
         [Column("updated_at")]
-        public DateTime Updated_at { get; set; }
+        public DateTime Updated_at { get; set; } = DateTime.Now.ToUniversalTime();
     }
 }

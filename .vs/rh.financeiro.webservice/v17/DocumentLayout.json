@@ -3,164 +3,116 @@
   "WorkspaceRootPath": "C:\\Users\\dhruv\\source\\repos\\rh-financeiro\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{5B3CEE09-7F6E-4E03-A4C7-731566ABE80B}|rh.financeiro.Domain\\rh.financeiro.Domain.csproj|c:\\users\\dhruv\\source\\repos\\rh-financeiro\\rh.financeiro.domain\\entities\\titulo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5B3CEE09-7F6E-4E03-A4C7-731566ABE80B}|rh.financeiro.Domain\\rh.financeiro.Domain.csproj|solutionrelative:rh.financeiro.domain\\entities\\titulo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F2D84C0A-0BC6-484B-8F9A-7F042E3168EF}|rh.financeiro.Services\\rh.financeiro.Services.csproj|c:\\users\\dhruv\\source\\repos\\rh-financeiro\\rh.financeiro.services\\services\\titulo\\tituloservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F2D84C0A-0BC6-484B-8F9A-7F042E3168EF}|rh.financeiro.Services\\rh.financeiro.Services.csproj|solutionrelative:rh.financeiro.services\\services\\titulo\\tituloservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5B3CEE09-7F6E-4E03-A4C7-731566ABE80B}|rh.financeiro.Domain\\rh.financeiro.Domain.csproj|c:\\users\\dhruv\\source\\repos\\rh-financeiro\\rh.financeiro.domain\\entities\\parcela.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5B3CEE09-7F6E-4E03-A4C7-731566ABE80B}|rh.financeiro.Domain\\rh.financeiro.Domain.csproj|solutionrelative:rh.financeiro.domain\\entities\\parcela.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F2D84C0A-0BC6-484B-8F9A-7F042E3168EF}|rh.financeiro.Services\\rh.financeiro.Services.csproj|c:\\users\\dhruv\\source\\repos\\rh-financeiro\\rh.financeiro.services\\services\\jobs\\jobsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F2D84C0A-0BC6-484B-8F9A-7F042E3168EF}|rh.financeiro.Services\\rh.financeiro.Services.csproj|solutionrelative:rh.financeiro.services\\services\\jobs\\jobsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F2D84C0A-0BC6-484B-8F9A-7F042E3168EF}|rh.financeiro.Services\\rh.financeiro.Services.csproj|c:\\users\\dhruv\\source\\repos\\rh-financeiro\\rh.financeiro.services\\services\\documentofiscal\\documentofiscalservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F2D84C0A-0BC6-484B-8F9A-7F042E3168EF}|rh.financeiro.Services\\rh.financeiro.Services.csproj|solutionrelative:rh.financeiro.services\\services\\documentofiscal\\documentofiscalservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5B3CEE09-7F6E-4E03-A4C7-731566ABE80B}|rh.financeiro.Domain\\rh.financeiro.Domain.csproj|c:\\users\\dhruv\\source\\repos\\rh-financeiro\\rh.financeiro.domain\\entities\\documentofiscalitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5B3CEE09-7F6E-4E03-A4C7-731566ABE80B}|rh.financeiro.Domain\\rh.financeiro.Domain.csproj|solutionrelative:rh.financeiro.domain\\entities\\documentofiscalitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5B3CEE09-7F6E-4E03-A4C7-731566ABE80B}|rh.financeiro.Domain\\rh.financeiro.Domain.csproj|c:\\users\\dhruv\\source\\repos\\rh-financeiro\\rh.financeiro.domain\\entities\\tributoitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5B3CEE09-7F6E-4E03-A4C7-731566ABE80B}|rh.financeiro.Domain\\rh.financeiro.Domain.csproj|solutionrelative:rh.financeiro.domain\\entities\\tributoitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5B3CEE09-7F6E-4E03-A4C7-731566ABE80B}|rh.financeiro.Domain\\rh.financeiro.Domain.csproj|c:\\users\\dhruv\\source\\repos\\rh-financeiro\\rh.financeiro.domain\\entities\\documentofiscal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5B3CEE09-7F6E-4E03-A4C7-731566ABE80B}|rh.financeiro.Domain\\rh.financeiro.Domain.csproj|solutionrelative:rh.financeiro.domain\\entities\\documentofiscal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{985F40C4-B54A-4753-B540-8A11049A70CF}|rh.financeiro.webservice\\rh.financeiro.webservice.csproj|c:\\users\\dhruv\\source\\repos\\rh-financeiro\\rh.financeiro.webservice\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{985F40C4-B54A-4753-B540-8A11049A70CF}|rh.financeiro.webservice\\rh.financeiro.webservice.csproj|solutionrelative:rh.financeiro.webservice\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5B3CEE09-7F6E-4E03-A4C7-731566ABE80B}|rh.financeiro.Domain\\rh.financeiro.Domain.csproj|c:\\users\\dhruv\\source\\repos\\rh-financeiro\\rh.financeiro.domain\\interfaces\\service\\titulo\\itituloservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5B3CEE09-7F6E-4E03-A4C7-731566ABE80B}|rh.financeiro.Domain\\rh.financeiro.Domain.csproj|solutionrelative:rh.financeiro.domain\\interfaces\\service\\titulo\\itituloservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{985F40C4-B54A-4753-B540-8A11049A70CF}|rh.financeiro.webservice\\rh.financeiro.webservice.csproj|c:\\users\\dhruv\\source\\repos\\rh-financeiro\\rh.financeiro.webservice\\controllers\\documentofiscal\\documentofiscalcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{985F40C4-B54A-4753-B540-8A11049A70CF}|rh.financeiro.webservice\\rh.financeiro.webservice.csproj|solutionrelative:rh.financeiro.webservice\\controllers\\documentofiscal\\documentofiscalcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F2D84C0A-0BC6-484B-8F9A-7F042E3168EF}|rh.financeiro.Services\\rh.financeiro.Services.csproj|c:\\users\\dhruv\\source\\repos\\rh-financeiro\\rh.financeiro.services\\services\\jobs\\jobsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F2D84C0A-0BC6-484B-8F9A-7F042E3168EF}|rh.financeiro.Services\\rh.financeiro.Services.csproj|solutionrelative:rh.financeiro.services\\services\\jobs\\jobsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5B3CEE09-7F6E-4E03-A4C7-731566ABE80B}|rh.financeiro.Domain\\rh.financeiro.Domain.csproj|c:\\users\\dhruv\\source\\repos\\rh-financeiro\\rh.financeiro.domain\\common\\documentosnfes\\documentosnfes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5B3CEE09-7F6E-4E03-A4C7-731566ABE80B}|rh.financeiro.Domain\\rh.financeiro.Domain.csproj|solutionrelative:rh.financeiro.domain\\common\\documentosnfes\\documentosnfes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{985F40C4-B54A-4753-B540-8A11049A70CF}|rh.financeiro.webservice\\rh.financeiro.webservice.csproj|c:\\users\\dhruv\\source\\repos\\rh-financeiro\\rh.financeiro.webservice\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{985F40C4-B54A-4753-B540-8A11049A70CF}|rh.financeiro.webservice\\rh.financeiro.webservice.csproj|solutionrelative:rh.financeiro.webservice\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5B3CEE09-7F6E-4E03-A4C7-731566ABE80B}|rh.financeiro.Domain\\rh.financeiro.Domain.csproj|c:\\users\\dhruv\\source\\repos\\rh-financeiro\\rh.financeiro.domain\\interfaces\\service\\documentofiscal\\idocumentofiscalservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5B3CEE09-7F6E-4E03-A4C7-731566ABE80B}|rh.financeiro.Domain\\rh.financeiro.Domain.csproj|solutionrelative:rh.financeiro.domain\\interfaces\\service\\documentofiscal\\idocumentofiscalservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F2D84C0A-0BC6-484B-8F9A-7F042E3168EF}|rh.financeiro.Services\\rh.financeiro.Services.csproj|c:\\users\\dhruv\\source\\repos\\rh-financeiro\\rh.financeiro.services\\services\\contasfinanceiras\\contasfinanceirasservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F2D84C0A-0BC6-484B-8F9A-7F042E3168EF}|rh.financeiro.Services\\rh.financeiro.Services.csproj|solutionrelative:rh.financeiro.services\\services\\contasfinanceiras\\contasfinanceirasservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5B3CEE09-7F6E-4E03-A4C7-731566ABE80B}|rh.financeiro.Domain\\rh.financeiro.Domain.csproj|c:\\users\\dhruv\\source\\repos\\rh-financeiro\\rh.financeiro.domain\\dto\\response\\documentofiscal\\buscardocumentosfiscais\\buscardocumentosfiscaisresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5B3CEE09-7F6E-4E03-A4C7-731566ABE80B}|rh.financeiro.Domain\\rh.financeiro.Domain.csproj|solutionrelative:rh.financeiro.domain\\dto\\response\\documentofiscal\\buscardocumentosfiscais\\buscardocumentosfiscaisresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F2D84C0A-0BC6-484B-8F9A-7F042E3168EF}|rh.financeiro.Services\\rh.financeiro.Services.csproj|c:\\users\\dhruv\\source\\repos\\rh-financeiro\\rh.financeiro.services\\services\\categoriafinanceira\\categoriafinanceiraservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F2D84C0A-0BC6-484B-8F9A-7F042E3168EF}|rh.financeiro.Services\\rh.financeiro.Services.csproj|solutionrelative:rh.financeiro.services\\services\\categoriafinanceira\\categoriafinanceiraservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5B3CEE09-7F6E-4E03-A4C7-731566ABE80B}|rh.financeiro.Domain\\rh.financeiro.Domain.csproj|c:\\users\\dhruv\\source\\repos\\rh-financeiro\\rh.financeiro.domain\\dto\\request\\documentofiscal\\buscardocumentosfiscais\\buscardocumentosfiscaisrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5B3CEE09-7F6E-4E03-A4C7-731566ABE80B}|rh.financeiro.Domain\\rh.financeiro.Domain.csproj|solutionrelative:rh.financeiro.domain\\dto\\request\\documentofiscal\\buscardocumentosfiscais\\buscardocumentosfiscaisrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{985F40C4-B54A-4753-B540-8A11049A70CF}|rh.financeiro.webservice\\rh.financeiro.webservice.csproj|c:\\users\\dhruv\\source\\repos\\rh-financeiro\\rh.financeiro.webservice\\controllers\\contafinanceira\\contafinanceiracontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{985F40C4-B54A-4753-B540-8A11049A70CF}|rh.financeiro.webservice\\rh.financeiro.webservice.csproj|solutionrelative:rh.financeiro.webservice\\controllers\\contafinanceira\\contafinanceiracontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{985F40C4-B54A-4753-B540-8A11049A70CF}|rh.financeiro.webservice\\rh.financeiro.webservice.csproj|c:\\users\\dhruv\\source\\repos\\rh-financeiro\\rh.financeiro.webservice\\controllers\\categoriafinanceira\\categoriafinanceiracontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{985F40C4-B54A-4753-B540-8A11049A70CF}|rh.financeiro.webservice\\rh.financeiro.webservice.csproj|solutionrelative:rh.financeiro.webservice\\controllers\\categoriafinanceira\\categoriafinanceiracontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{985F40C4-B54A-4753-B540-8A11049A70CF}|rh.financeiro.webservice\\rh.financeiro.webservice.csproj|c:\\users\\dhruv\\source\\repos\\rh-financeiro\\rh.financeiro.webservice\\controllers\\participantes\\participantescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{985F40C4-B54A-4753-B540-8A11049A70CF}|rh.financeiro.webservice\\rh.financeiro.webservice.csproj|solutionrelative:rh.financeiro.webservice\\controllers\\participantes\\participantescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0CD95123-5D25-4787-B592-B4E0B9A694CA}|rh.financeiro.CrossCutting\\rh.financeiro.CrossCutting.csproj|c:\\users\\dhruv\\source\\repos\\rh-financeiro\\rh.financeiro.crosscutting\\utils\\utils.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0CD95123-5D25-4787-B592-B4E0B9A694CA}|rh.financeiro.CrossCutting\\rh.financeiro.CrossCutting.csproj|solutionrelative:rh.financeiro.crosscutting\\utils\\utils.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5B3CEE09-7F6E-4E03-A4C7-731566ABE80B}|rh.financeiro.Domain\\rh.financeiro.Domain.csproj|c:\\users\\dhruv\\source\\repos\\rh-financeiro\\rh.financeiro.domain\\interfaces\\service\\jobs\\ijobsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5B3CEE09-7F6E-4E03-A4C7-731566ABE80B}|rh.financeiro.Domain\\rh.financeiro.Domain.csproj|solutionrelative:rh.financeiro.domain\\interfaces\\service\\jobs\\ijobsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5B3CEE09-7F6E-4E03-A4C7-731566ABE80B}|rh.financeiro.Domain\\rh.financeiro.Domain.csproj|c:\\users\\dhruv\\source\\repos\\rh-financeiro\\rh.financeiro.domain\\dto\\response\\nfe\\token\\tokenresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5B3CEE09-7F6E-4E03-A4C7-731566ABE80B}|rh.financeiro.Domain\\rh.financeiro.Domain.csproj|solutionrelative:rh.financeiro.domain\\dto\\response\\nfe\\token\\tokenresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5B3CEE09-7F6E-4E03-A4C7-731566ABE80B}|rh.financeiro.Domain\\rh.financeiro.Domain.csproj|c:\\users\\dhruv\\source\\repos\\rh-financeiro\\rh.financeiro.domain\\enums\\meiopagamentosefaz.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5B3CEE09-7F6E-4E03-A4C7-731566ABE80B}|rh.financeiro.Domain\\rh.financeiro.Domain.csproj|solutionrelative:rh.financeiro.domain\\enums\\meiopagamentosefaz.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5B3CEE09-7F6E-4E03-A4C7-731566ABE80B}|rh.financeiro.Domain\\rh.financeiro.Domain.csproj|c:\\users\\dhruv\\source\\repos\\rh-financeiro\\rh.financeiro.domain\\interfaces\\service\\categoriafinanceira\\icategoriafinanceiraservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5B3CEE09-7F6E-4E03-A4C7-731566ABE80B}|rh.financeiro.Domain\\rh.financeiro.Domain.csproj|solutionrelative:rh.financeiro.domain\\interfaces\\service\\categoriafinanceira\\icategoriafinanceiraservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5B3CEE09-7F6E-4E03-A4C7-731566ABE80B}|rh.financeiro.Domain\\rh.financeiro.Domain.csproj|c:\\users\\dhruv\\source\\repos\\rh-financeiro\\rh.financeiro.domain\\interfaces\\service\\contafinanceira\\icontasfinanceirasservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5B3CEE09-7F6E-4E03-A4C7-731566ABE80B}|rh.financeiro.Domain\\rh.financeiro.Domain.csproj|solutionrelative:rh.financeiro.domain\\interfaces\\service\\contafinanceira\\icontasfinanceirasservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5B3CEE09-7F6E-4E03-A4C7-731566ABE80B}|rh.financeiro.Domain\\rh.financeiro.Domain.csproj|c:\\users\\dhruv\\source\\repos\\rh-financeiro\\rh.financeiro.domain\\dto\\request\\categoriafinanceira\\editarcategoriafinanceira\\editarcategoriafinanceirarequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5B3CEE09-7F6E-4E03-A4C7-731566ABE80B}|rh.financeiro.Domain\\rh.financeiro.Domain.csproj|solutionrelative:rh.financeiro.domain\\dto\\request\\categoriafinanceira\\editarcategoriafinanceira\\editarcategoriafinanceirarequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5B3CEE09-7F6E-4E03-A4C7-731566ABE80B}|rh.financeiro.Domain\\rh.financeiro.Domain.csproj|c:\\users\\dhruv\\source\\repos\\rh-financeiro\\rh.financeiro.domain\\dto\\request\\contasfinanceiras\\buscarcontasfinanceiras\\buscarcontasfinanceirasrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5B3CEE09-7F6E-4E03-A4C7-731566ABE80B}|rh.financeiro.Domain\\rh.financeiro.Domain.csproj|solutionrelative:rh.financeiro.domain\\dto\\request\\contasfinanceiras\\buscarcontasfinanceiras\\buscarcontasfinanceirasrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5B3CEE09-7F6E-4E03-A4C7-731566ABE80B}|rh.financeiro.Domain\\rh.financeiro.Domain.csproj|c:\\users\\dhruv\\source\\repos\\rh-financeiro\\rh.financeiro.domain\\dto\\request\\categoriafinanceira\\criarcategoriafinanceira\\criarcategoriafinanceirarequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5B3CEE09-7F6E-4E03-A4C7-731566ABE80B}|rh.financeiro.Domain\\rh.financeiro.Domain.csproj|solutionrelative:rh.financeiro.domain\\dto\\request\\categoriafinanceira\\criarcategoriafinanceira\\criarcategoriafinanceirarequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5B3CEE09-7F6E-4E03-A4C7-731566ABE80B}|rh.financeiro.Domain\\rh.financeiro.Domain.csproj|c:\\users\\dhruv\\source\\repos\\rh-financeiro\\rh.financeiro.domain\\entities\\contafinanceira.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5B3CEE09-7F6E-4E03-A4C7-731566ABE80B}|rh.financeiro.Domain\\rh.financeiro.Domain.csproj|solutionrelative:rh.financeiro.domain\\entities\\contafinanceira.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5B3CEE09-7F6E-4E03-A4C7-731566ABE80B}|rh.financeiro.Domain\\rh.financeiro.Domain.csproj|c:\\users\\dhruv\\source\\repos\\rh-financeiro\\rh.financeiro.domain\\dto\\request\\contasfinanceiras\\criarcontafinanceira\\criarcontafinanceirarequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5B3CEE09-7F6E-4E03-A4C7-731566ABE80B}|rh.financeiro.Domain\\rh.financeiro.Domain.csproj|solutionrelative:rh.financeiro.domain\\dto\\request\\contasfinanceiras\\criarcontafinanceira\\criarcontafinanceirarequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5B3CEE09-7F6E-4E03-A4C7-731566ABE80B}|rh.financeiro.Domain\\rh.financeiro.Domain.csproj|c:\\users\\dhruv\\source\\repos\\rh-financeiro\\rh.financeiro.domain\\dto\\request\\contasfinanceiras\\editarcontafinanceira\\editarcontafinanceirarequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5B3CEE09-7F6E-4E03-A4C7-731566ABE80B}|rh.financeiro.Domain\\rh.financeiro.Domain.csproj|solutionrelative:rh.financeiro.domain\\dto\\request\\contasfinanceiras\\editarcontafinanceira\\editarcontafinanceirarequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F2D84C0A-0BC6-484B-8F9A-7F042E3168EF}|rh.financeiro.Services\\rh.financeiro.Services.csproj|c:\\users\\dhruv\\source\\repos\\rh-financeiro\\rh.financeiro.services\\services\\nfe\\nfeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F2D84C0A-0BC6-484B-8F9A-7F042E3168EF}|rh.financeiro.Services\\rh.financeiro.Services.csproj|solutionrelative:rh.financeiro.services\\services\\nfe\\nfeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{985F40C4-B54A-4753-B540-8A11049A70CF}|rh.financeiro.webservice\\rh.financeiro.webservice.csproj|c:\\users\\dhruv\\source\\repos\\rh-financeiro\\rh.financeiro.webservice\\controllers\\auth\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{985F40C4-B54A-4753-B540-8A11049A70CF}|rh.financeiro.webservice\\rh.financeiro.webservice.csproj|solutionrelative:rh.financeiro.webservice\\controllers\\auth\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{985F40C4-B54A-4753-B540-8A11049A70CF}|rh.financeiro.webservice\\rh.financeiro.webservice.csproj|c:\\users\\dhruv\\source\\repos\\rh-financeiro\\rh.financeiro.webservice\\middlewares\\jwtauthorize.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{985F40C4-B54A-4753-B540-8A11049A70CF}|rh.financeiro.webservice\\rh.financeiro.webservice.csproj|solutionrelative:rh.financeiro.webservice\\middlewares\\jwtauthorize.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0CD95123-5D25-4787-B592-B4E0B9A694CA}|rh.financeiro.CrossCutting\\rh.financeiro.CrossCutting.csproj|c:\\users\\dhruv\\source\\repos\\rh-financeiro\\rh.financeiro.crosscutting\\utils\\utils.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0CD95123-5D25-4787-B592-B4E0B9A694CA}|rh.financeiro.CrossCutting\\rh.financeiro.CrossCutting.csproj|solutionrelative:rh.financeiro.crosscutting\\utils\\utils.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{985F40C4-B54A-4753-B540-8A11049A70CF}|rh.financeiro.webservice\\rh.financeiro.webservice.csproj|c:\\users\\dhruv\\source\\repos\\rh-financeiro\\rh.financeiro.webservice\\rh.financeiro.webservice.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{985F40C4-B54A-4753-B540-8A11049A70CF}|rh.financeiro.webservice\\rh.financeiro.webservice.csproj|solutionrelative:rh.financeiro.webservice\\rh.financeiro.webservice.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+      "AbsoluteMoniker": "D:0:0:{F2D84C0A-0BC6-484B-8F9A-7F042E3168EF}|rh.financeiro.Services\\rh.financeiro.Services.csproj|c:\\users\\dhruv\\source\\repos\\rh-financeiro\\rh.financeiro.services\\services\\titulo\\tituloservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F2D84C0A-0BC6-484B-8F9A-7F042E3168EF}|rh.financeiro.Services\\rh.financeiro.Services.csproj|solutionrelative:rh.financeiro.services\\services\\titulo\\tituloservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F2D84C0A-0BC6-484B-8F9A-7F042E3168EF}|rh.financeiro.Services\\rh.financeiro.Services.csproj|c:\\users\\dhruv\\source\\repos\\rh-financeiro\\rh.financeiro.services\\services\\movimentacaobancaria\\movimentacaobancariaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F2D84C0A-0BC6-484B-8F9A-7F042E3168EF}|rh.financeiro.Services\\rh.financeiro.Services.csproj|solutionrelative:rh.financeiro.services\\services\\movimentacaobancaria\\movimentacaobancariaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F2D84C0A-0BC6-484B-8F9A-7F042E3168EF}|rh.financeiro.Services\\rh.financeiro.Services.csproj|c:\\users\\dhruv\\source\\repos\\rh-financeiro\\rh.financeiro.services\\services\\participantes\\participantesservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F2D84C0A-0BC6-484B-8F9A-7F042E3168EF}|rh.financeiro.Services\\rh.financeiro.Services.csproj|solutionrelative:rh.financeiro.services\\services\\participantes\\participantesservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{985F40C4-B54A-4753-B540-8A11049A70CF}|rh.financeiro.webservice\\rh.financeiro.webservice.csproj|c:\\users\\dhruv\\source\\repos\\rh-financeiro\\rh.financeiro.webservice\\controllers\\titulo\\titulocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{985F40C4-B54A-4753-B540-8A11049A70CF}|rh.financeiro.webservice\\rh.financeiro.webservice.csproj|solutionrelative:rh.financeiro.webservice\\controllers\\titulo\\titulocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B3CEE09-7F6E-4E03-A4C7-731566ABE80B}|rh.financeiro.Domain\\rh.financeiro.Domain.csproj|c:\\users\\dhruv\\source\\repos\\rh-financeiro\\rh.financeiro.domain\\entities\\contafinanceira.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5B3CEE09-7F6E-4E03-A4C7-731566ABE80B}|rh.financeiro.Domain\\rh.financeiro.Domain.csproj|solutionrelative:rh.financeiro.domain\\entities\\contafinanceira.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B3CEE09-7F6E-4E03-A4C7-731566ABE80B}|rh.financeiro.Domain\\rh.financeiro.Domain.csproj|c:\\users\\dhruv\\source\\repos\\rh-financeiro\\rh.financeiro.domain\\entities\\participante.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5B3CEE09-7F6E-4E03-A4C7-731566ABE80B}|rh.financeiro.Domain\\rh.financeiro.Domain.csproj|solutionrelative:rh.financeiro.domain\\entities\\participante.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F2D84C0A-0BC6-484B-8F9A-7F042E3168EF}|rh.financeiro.Services\\rh.financeiro.Services.csproj|c:\\users\\dhruv\\source\\repos\\rh-financeiro\\rh.financeiro.services\\services\\contasfinanceiras\\contasfinanceirasservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F2D84C0A-0BC6-484B-8F9A-7F042E3168EF}|rh.financeiro.Services\\rh.financeiro.Services.csproj|solutionrelative:rh.financeiro.services\\services\\contasfinanceiras\\contasfinanceirasservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F2D84C0A-0BC6-484B-8F9A-7F042E3168EF}|rh.financeiro.Services\\rh.financeiro.Services.csproj|c:\\users\\dhruv\\source\\repos\\rh-financeiro\\rh.financeiro.services\\services\\categoriafinanceira\\categoriafinanceiraservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F2D84C0A-0BC6-484B-8F9A-7F042E3168EF}|rh.financeiro.Services\\rh.financeiro.Services.csproj|solutionrelative:rh.financeiro.services\\services\\categoriafinanceira\\categoriafinanceiraservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{985F40C4-B54A-4753-B540-8A11049A70CF}|rh.financeiro.webservice\\rh.financeiro.webservice.csproj|c:\\users\\dhruv\\source\\repos\\rh-financeiro\\rh.financeiro.webservice\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{985F40C4-B54A-4753-B540-8A11049A70CF}|rh.financeiro.webservice\\rh.financeiro.webservice.csproj|solutionrelative:rh.financeiro.webservice\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{985F40C4-B54A-4753-B540-8A11049A70CF}|rh.financeiro.webservice\\rh.financeiro.webservice.csproj|c:\\users\\dhruv\\source\\repos\\rh-financeiro\\rh.financeiro.webservice\\controllers\\conciliacao\\conciliacaocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{985F40C4-B54A-4753-B540-8A11049A70CF}|rh.financeiro.webservice\\rh.financeiro.webservice.csproj|solutionrelative:rh.financeiro.webservice\\controllers\\conciliacao\\conciliacaocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AB515B9D-4212-48FB-A1F7-7B022F35BC79}|rh.financeiro.Data\\rh.financeiro.Data.csproj|c:\\users\\dhruv\\source\\repos\\rh-financeiro\\rh.financeiro.data\\context\\default\\defaultcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AB515B9D-4212-48FB-A1F7-7B022F35BC79}|rh.financeiro.Data\\rh.financeiro.Data.csproj|solutionrelative:rh.financeiro.data\\context\\default\\defaultcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B3CEE09-7F6E-4E03-A4C7-731566ABE80B}|rh.financeiro.Domain\\rh.financeiro.Domain.csproj|c:\\users\\dhruv\\source\\repos\\rh-financeiro\\rh.financeiro.domain\\entities\\parcela.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5B3CEE09-7F6E-4E03-A4C7-731566ABE80B}|rh.financeiro.Domain\\rh.financeiro.Domain.csproj|solutionrelative:rh.financeiro.domain\\entities\\parcela.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B3CEE09-7F6E-4E03-A4C7-731566ABE80B}|rh.financeiro.Domain\\rh.financeiro.Domain.csproj|c:\\users\\dhruv\\source\\repos\\rh-financeiro\\rh.financeiro.domain\\entities\\movimentobancario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5B3CEE09-7F6E-4E03-A4C7-731566ABE80B}|rh.financeiro.Domain\\rh.financeiro.Domain.csproj|solutionrelative:rh.financeiro.domain\\entities\\movimentobancario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B3CEE09-7F6E-4E03-A4C7-731566ABE80B}|rh.financeiro.Domain\\rh.financeiro.Domain.csproj|c:\\users\\dhruv\\source\\repos\\rh-financeiro\\rh.financeiro.domain\\interfaces\\service\\movimentacaobancaria\\imovimentacaobancariaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5B3CEE09-7F6E-4E03-A4C7-731566ABE80B}|rh.financeiro.Domain\\rh.financeiro.Domain.csproj|solutionrelative:rh.financeiro.domain\\interfaces\\service\\movimentacaobancaria\\imovimentacaobancariaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{985F40C4-B54A-4753-B540-8A11049A70CF}|rh.financeiro.webservice\\rh.financeiro.webservice.csproj|c:\\users\\dhruv\\source\\repos\\rh-financeiro\\rh.financeiro.webservice\\controllers\\categoriafinanceira\\categoriafinanceiracontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{985F40C4-B54A-4753-B540-8A11049A70CF}|rh.financeiro.webservice\\rh.financeiro.webservice.csproj|solutionrelative:rh.financeiro.webservice\\controllers\\categoriafinanceira\\categoriafinanceiracontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B3CEE09-7F6E-4E03-A4C7-731566ABE80B}|rh.financeiro.Domain\\rh.financeiro.Domain.csproj|c:\\users\\dhruv\\source\\repos\\rh-financeiro\\rh.financeiro.domain\\dto\\request\\participantes\\buscarparticipantes\\buscarparticipantesrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5B3CEE09-7F6E-4E03-A4C7-731566ABE80B}|rh.financeiro.Domain\\rh.financeiro.Domain.csproj|solutionrelative:rh.financeiro.domain\\dto\\request\\participantes\\buscarparticipantes\\buscarparticipantesrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{985F40C4-B54A-4753-B540-8A11049A70CF}|rh.financeiro.webservice\\rh.financeiro.webservice.csproj|c:\\users\\dhruv\\source\\repos\\rh-financeiro\\rh.financeiro.webservice\\controllers\\documentofiscal\\documentofiscalcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{985F40C4-B54A-4753-B540-8A11049A70CF}|rh.financeiro.webservice\\rh.financeiro.webservice.csproj|solutionrelative:rh.financeiro.webservice\\controllers\\documentofiscal\\documentofiscalcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{985F40C4-B54A-4753-B540-8A11049A70CF}|rh.financeiro.webservice\\rh.financeiro.webservice.csproj|c:\\users\\dhruv\\source\\repos\\rh-financeiro\\rh.financeiro.webservice\\appsettings.production.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{985F40C4-B54A-4753-B540-8A11049A70CF}|rh.financeiro.webservice\\rh.financeiro.webservice.csproj|solutionrelative:rh.financeiro.webservice\\appsettings.production.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{985F40C4-B54A-4753-B540-8A11049A70CF}|rh.financeiro.webservice\\rh.financeiro.webservice.csproj|c:\\users\\dhruv\\source\\repos\\rh-financeiro\\rh.financeiro.webservice\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{985F40C4-B54A-4753-B540-8A11049A70CF}|rh.financeiro.webservice\\rh.financeiro.webservice.csproj|solutionrelative:rh.financeiro.webservice\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{985F40C4-B54A-4753-B540-8A11049A70CF}|rh.financeiro.webservice\\rh.financeiro.webservice.csproj|c:\\users\\dhruv\\source\\repos\\rh-financeiro\\rh.financeiro.webservice\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{985F40C4-B54A-4753-B540-8A11049A70CF}|rh.financeiro.webservice\\rh.financeiro.webservice.csproj|solutionrelative:rh.financeiro.webservice\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{985F40C4-B54A-4753-B540-8A11049A70CF}|rh.financeiro.webservice\\rh.financeiro.webservice.csproj|c:\\users\\dhruv\\source\\repos\\rh-financeiro\\rh.financeiro.webservice\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{985F40C4-B54A-4753-B540-8A11049A70CF}|rh.financeiro.webservice\\rh.financeiro.webservice.csproj|solutionrelative:rh.financeiro.webservice\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{985F40C4-B54A-4753-B540-8A11049A70CF}|rh.financeiro.webservice\\rh.financeiro.webservice.csproj|c:\\users\\dhruv\\source\\repos\\rh-financeiro\\rh.financeiro.webservice\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{985F40C4-B54A-4753-B540-8A11049A70CF}|rh.financeiro.webservice\\rh.financeiro.webservice.csproj|solutionrelative:rh.financeiro.webservice\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}"
+      "AbsoluteMoniker": "D:0:0:{985F40C4-B54A-4753-B540-8A11049A70CF}|rh.financeiro.webservice\\rh.financeiro.webservice.csproj|c:\\users\\dhruv\\source\\repos\\rh-financeiro\\rh.financeiro.webservice\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{985F40C4-B54A-4753-B540-8A11049A70CF}|rh.financeiro.webservice\\rh.financeiro.webservice.csproj|solutionrelative:rh.financeiro.webservice\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{985F40C4-B54A-4753-B540-8A11049A70CF}|rh.financeiro.webservice\\rh.financeiro.webservice.csproj|c:\\users\\dhruv\\source\\repos\\rh-financeiro\\rh.financeiro.webservice\\controllers\\movimentacaobancaria\\movimentacaobancariacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{985F40C4-B54A-4753-B540-8A11049A70CF}|rh.financeiro.webservice\\rh.financeiro.webservice.csproj|solutionrelative:rh.financeiro.webservice\\controllers\\movimentacaobancaria\\movimentacaobancariacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{985F40C4-B54A-4753-B540-8A11049A70CF}|rh.financeiro.webservice\\rh.financeiro.webservice.csproj|c:\\users\\dhruv\\source\\repos\\rh-financeiro\\rh.financeiro.webservice\\controllers\\contafinanceira\\contafinanceiracontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{985F40C4-B54A-4753-B540-8A11049A70CF}|rh.financeiro.webservice\\rh.financeiro.webservice.csproj|solutionrelative:rh.financeiro.webservice\\controllers\\contafinanceira\\contafinanceiracontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -170,8 +122,22 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 8,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "ConciliacaoController.cs",
+              "DocumentMoniker": "C:\\Users\\dhruv\\source\\repos\\rh-financeiro\\rh.financeiro.webservice\\Controllers\\Conciliacao\\ConciliacaoController.cs",
+              "RelativeDocumentMoniker": "rh.financeiro.webservice\\Controllers\\Conciliacao\\ConciliacaoController.cs",
+              "ToolTip": "C:\\Users\\dhruv\\source\\repos\\rh-financeiro\\rh.financeiro.webservice\\Controllers\\Conciliacao\\ConciliacaoController.cs",
+              "RelativeToolTip": "rh.financeiro.webservice\\Controllers\\Conciliacao\\ConciliacaoController.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAArwB8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-12T12:20:38.665Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
@@ -182,262 +148,249 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Titulo.cs",
-              "DocumentMoniker": "C:\\Users\\dhruv\\source\\repos\\rh-financeiro\\rh.financeiro.Domain\\Entities\\Titulo.cs",
-              "RelativeDocumentMoniker": "rh.financeiro.Domain\\Entities\\Titulo.cs",
-              "ToolTip": "C:\\Users\\dhruv\\source\\repos\\rh-financeiro\\rh.financeiro.Domain\\Entities\\Titulo.cs",
-              "RelativeToolTip": "rh.financeiro.Domain\\Entities\\Titulo.cs",
-              "ViewState": "AgIAABkAAAAAAAAAAAAuwC0AAAABAAAAAAAAAA==",
+              "DocumentIndex": 3,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "C:\\Users\\dhruv\\source\\repos\\rh-financeiro\\rh.financeiro.webservice\\Controllers\\Auth\\AuthController.cs",
+              "RelativeDocumentMoniker": "rh.financeiro.webservice\\Controllers\\Auth\\AuthController.cs",
+              "ToolTip": "C:\\Users\\dhruv\\source\\repos\\rh-financeiro\\rh.financeiro.webservice\\Controllers\\Auth\\AuthController.cs",
+              "RelativeToolTip": "rh.financeiro.webservice\\Controllers\\Auth\\AuthController.cs",
+              "ViewState": "AgIAADYAAAAAAAAAAAAUwEQAAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-05T18:09:19.368Z",
+              "WhenOpened": "2026-04-12T18:15:55.69Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "TributoItem.cs",
-              "DocumentMoniker": "C:\\Users\\dhruv\\source\\repos\\rh-financeiro\\rh.financeiro.Domain\\Entities\\TributoItem.cs",
-              "RelativeDocumentMoniker": "rh.financeiro.Domain\\Entities\\TributoItem.cs",
-              "ToolTip": "C:\\Users\\dhruv\\source\\repos\\rh-financeiro\\rh.financeiro.Domain\\Entities\\TributoItem.cs",
-              "RelativeToolTip": "rh.financeiro.Domain\\Entities\\TributoItem.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAqwBAAAAAkAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-05T18:00:14.265Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
               "Title": "TituloService.cs",
               "DocumentMoniker": "C:\\Users\\dhruv\\source\\repos\\rh-financeiro\\rh.financeiro.Services\\Services\\Titulo\\TituloService.cs",
               "RelativeDocumentMoniker": "rh.financeiro.Services\\Services\\Titulo\\TituloService.cs",
               "ToolTip": "C:\\Users\\dhruv\\source\\repos\\rh-financeiro\\rh.financeiro.Services\\Services\\Titulo\\TituloService.cs",
               "RelativeToolTip": "rh.financeiro.Services\\Services\\Titulo\\TituloService.cs",
-              "ViewState": "AgIAABwAAAAAAAAAAAAMwCUAAAA6AAAAAAAAAA==",
+              "ViewState": "AgIAADwAAAAAAAAAAAAiwGAAAAA0AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-05T16:56:33.184Z",
+              "WhenOpened": "2026-04-12T17:02:56.537Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "DocumentosNfes.cs",
-              "DocumentMoniker": "C:\\Users\\dhruv\\source\\repos\\rh-financeiro\\rh.financeiro.Domain\\Common\\DocumentosNfes\\DocumentosNfes.cs",
-              "RelativeDocumentMoniker": "rh.financeiro.Domain\\Common\\DocumentosNfes\\DocumentosNfes.cs",
-              "ToolTip": "C:\\Users\\dhruv\\source\\repos\\rh-financeiro\\rh.financeiro.Domain\\Common\\DocumentosNfes\\DocumentosNfes.cs",
-              "RelativeToolTip": "rh.financeiro.Domain\\Common\\DocumentosNfes\\DocumentosNfes.cs",
-              "ViewState": "AgIAAEsAAAAAAAAAAAAUwFwAAAArAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-05T16:22:07.288Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "DocumentoFiscalItem.cs",
-              "DocumentMoniker": "C:\\Users\\dhruv\\source\\repos\\rh-financeiro\\rh.financeiro.Domain\\Entities\\DocumentoFiscalItem.cs",
-              "RelativeDocumentMoniker": "rh.financeiro.Domain\\Entities\\DocumentoFiscalItem.cs",
-              "ToolTip": "C:\\Users\\dhruv\\source\\repos\\rh-financeiro\\rh.financeiro.Domain\\Entities\\DocumentoFiscalItem.cs",
-              "RelativeToolTip": "rh.financeiro.Domain\\Entities\\DocumentoFiscalItem.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAqwAsAAAARAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-05T16:20:49.395Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "DocumentoFiscalController.cs",
-              "DocumentMoniker": "C:\\Users\\dhruv\\source\\repos\\rh-financeiro\\rh.financeiro.webservice\\Controllers\\DocumentoFiscal\\DocumentoFiscalController.cs",
-              "RelativeDocumentMoniker": "rh.financeiro.webservice\\Controllers\\DocumentoFiscal\\DocumentoFiscalController.cs",
-              "ToolTip": "C:\\Users\\dhruv\\source\\repos\\rh-financeiro\\rh.financeiro.webservice\\Controllers\\DocumentoFiscal\\DocumentoFiscalController.cs",
-              "RelativeToolTip": "rh.financeiro.webservice\\Controllers\\DocumentoFiscal\\DocumentoFiscalController.cs",
-              "ViewState": "AgIAACIAAAAAAAAAAAAAADMAAAARAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-05T13:45:01.696Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "DocumentoFiscalService.cs",
               "DocumentMoniker": "C:\\Users\\dhruv\\source\\repos\\rh-financeiro\\rh.financeiro.Services\\Services\\DocumentoFiscal\\DocumentoFiscalService.cs",
               "RelativeDocumentMoniker": "rh.financeiro.Services\\Services\\DocumentoFiscal\\DocumentoFiscalService.cs",
               "ToolTip": "C:\\Users\\dhruv\\source\\repos\\rh-financeiro\\rh.financeiro.Services\\Services\\DocumentoFiscal\\DocumentoFiscalService.cs",
               "RelativeToolTip": "rh.financeiro.Services\\Services\\DocumentoFiscal\\DocumentoFiscalService.cs",
-              "ViewState": "AgIAACMAAAAAAAAAAAAYwHkAAAAaAAAAAAAAAA==",
+              "ViewState": "AgIAAHcBAAAAAAAAAAAgwIMBAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-05T15:02:46.139Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "BuscarDocumentosFiscaisResponse.cs",
-              "DocumentMoniker": "C:\\Users\\dhruv\\source\\repos\\rh-financeiro\\rh.financeiro.Domain\\Dto\\Response\\DocumentoFiscal\\BuscarDocumentosFiscais\\BuscarDocumentosFiscaisResponse.cs",
-              "RelativeDocumentMoniker": "rh.financeiro.Domain\\Dto\\Response\\DocumentoFiscal\\BuscarDocumentosFiscais\\BuscarDocumentosFiscaisResponse.cs",
-              "ToolTip": "C:\\Users\\dhruv\\source\\repos\\rh-financeiro\\rh.financeiro.Domain\\Dto\\Response\\DocumentoFiscal\\BuscarDocumentosFiscais\\BuscarDocumentosFiscaisResponse.cs",
-              "RelativeToolTip": "rh.financeiro.Domain\\Dto\\Response\\DocumentoFiscal\\BuscarDocumentosFiscais\\BuscarDocumentosFiscaisResponse.cs",
-              "ViewState": "AgIAABIAAAAAAAAAAAAkwB8AAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-05T13:53:30.899Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\dhruv\\source\\repos\\rh-financeiro\\rh.financeiro.webservice\\Program.cs",
-              "RelativeDocumentMoniker": "rh.financeiro.webservice\\Program.cs",
-              "ToolTip": "C:\\Users\\dhruv\\source\\repos\\rh-financeiro\\rh.financeiro.webservice\\Program.cs",
-              "RelativeToolTip": "rh.financeiro.webservice\\Program.cs",
-              "ViewState": "AgIAAGYAAAAAAAAAAAApwHcAAAAaAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-28T15:37:46.473Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Parcela.cs",
-              "DocumentMoniker": "C:\\Users\\dhruv\\source\\repos\\rh-financeiro\\rh.financeiro.Domain\\Entities\\Parcela.cs",
-              "RelativeDocumentMoniker": "rh.financeiro.Domain\\Entities\\Parcela.cs",
-              "ToolTip": "C:\\Users\\dhruv\\source\\repos\\rh-financeiro\\rh.financeiro.Domain\\Entities\\Parcela.cs",
-              "RelativeToolTip": "rh.financeiro.Domain\\Entities\\Parcela.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAqwA8AAAARAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-05T13:39:40.587Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "DocumentoFiscal.cs",
-              "DocumentMoniker": "C:\\Users\\dhruv\\source\\repos\\rh-financeiro\\rh.financeiro.Domain\\Entities\\DocumentoFiscal.cs",
-              "RelativeDocumentMoniker": "rh.financeiro.Domain\\Entities\\DocumentoFiscal.cs",
-              "ToolTip": "C:\\Users\\dhruv\\source\\repos\\rh-financeiro\\rh.financeiro.Domain\\Entities\\DocumentoFiscal.cs",
-              "RelativeToolTip": "rh.financeiro.Domain\\Entities\\DocumentoFiscal.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAqwBAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-04T15:49:53.658Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "ITituloService.cs",
-              "DocumentMoniker": "C:\\Users\\dhruv\\source\\repos\\rh-financeiro\\rh.financeiro.Domain\\Interfaces\\Service\\Titulo\\ITituloService.cs",
-              "RelativeDocumentMoniker": "rh.financeiro.Domain\\Interfaces\\Service\\Titulo\\ITituloService.cs",
-              "ToolTip": "C:\\Users\\dhruv\\source\\repos\\rh-financeiro\\rh.financeiro.Domain\\Interfaces\\Service\\Titulo\\ITituloService.cs",
-              "RelativeToolTip": "rh.financeiro.Domain\\Interfaces\\Service\\Titulo\\ITituloService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAoAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-05T16:57:01.678Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "CategoriaFinanceiraService.cs",
-              "DocumentMoniker": "C:\\Users\\dhruv\\source\\repos\\rh-financeiro\\rh.financeiro.Services\\Services\\CategoriaFinanceira\\CategoriaFinanceiraService.cs",
-              "RelativeDocumentMoniker": "rh.financeiro.Services\\Services\\CategoriaFinanceira\\CategoriaFinanceiraService.cs",
-              "ToolTip": "C:\\Users\\dhruv\\source\\repos\\rh-financeiro\\rh.financeiro.Services\\Services\\CategoriaFinanceira\\CategoriaFinanceiraService.cs",
-              "RelativeToolTip": "rh.financeiro.Services\\Services\\CategoriaFinanceira\\CategoriaFinanceiraService.cs",
-              "ViewState": "AgIAAGgAAAAAAAAAAAAwwHQAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-05T14:29:22.755Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "IDocumentoFiscalService.cs",
-              "DocumentMoniker": "C:\\Users\\dhruv\\source\\repos\\rh-financeiro\\rh.financeiro.Domain\\Interfaces\\Service\\DocumentoFiscal\\IDocumentoFiscalService.cs",
-              "RelativeDocumentMoniker": "rh.financeiro.Domain\\Interfaces\\Service\\DocumentoFiscal\\IDocumentoFiscalService.cs",
-              "ToolTip": "C:\\Users\\dhruv\\source\\repos\\rh-financeiro\\rh.financeiro.Domain\\Interfaces\\Service\\DocumentoFiscal\\IDocumentoFiscalService.cs",
-              "RelativeToolTip": "rh.financeiro.Domain\\Interfaces\\Service\\DocumentoFiscal\\IDocumentoFiscalService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAqwBAAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-05T13:45:58.112Z",
+              "WhenOpened": "2026-04-12T16:30:30.202Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 10,
+              "Title": "Participante.cs",
+              "DocumentMoniker": "C:\\Users\\dhruv\\source\\repos\\rh-financeiro\\rh.financeiro.Domain\\Entities\\Participante.cs",
+              "RelativeDocumentMoniker": "rh.financeiro.Domain\\Entities\\Participante.cs",
+              "ToolTip": "C:\\Users\\dhruv\\source\\repos\\rh-financeiro\\rh.financeiro.Domain\\Entities\\Participante.cs",
+              "RelativeToolTip": "rh.financeiro.Domain\\Entities\\Participante.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABYAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-12T14:23:39.454Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "TituloController.cs",
+              "DocumentMoniker": "C:\\Users\\dhruv\\source\\repos\\rh-financeiro\\rh.financeiro.webservice\\Controllers\\Titulo\\TituloController.cs",
+              "RelativeDocumentMoniker": "rh.financeiro.webservice\\Controllers\\Titulo\\TituloController.cs",
+              "ToolTip": "C:\\Users\\dhruv\\source\\repos\\rh-financeiro\\rh.financeiro.webservice\\Controllers\\Titulo\\TituloController.cs",
+              "RelativeToolTip": "rh.financeiro.webservice\\Controllers\\Titulo\\TituloController.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAiwCYAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-11T16:57:23.645Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
               "Title": "JobsService.cs",
               "DocumentMoniker": "C:\\Users\\dhruv\\source\\repos\\rh-financeiro\\rh.financeiro.Services\\Services\\Jobs\\JobsService.cs",
               "RelativeDocumentMoniker": "rh.financeiro.Services\\Services\\Jobs\\JobsService.cs",
               "ToolTip": "C:\\Users\\dhruv\\source\\repos\\rh-financeiro\\rh.financeiro.Services\\Services\\Jobs\\JobsService.cs",
               "RelativeToolTip": "rh.financeiro.Services\\Services\\Jobs\\JobsService.cs",
-              "ViewState": "AgIAAHgAAAAAAAAAAAAYwIkAAAAVAAAAAAAAAA==",
+              "ViewState": "AgIAAMwAAAAAAAAAAAAhwNoAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-03T18:01:12.566Z",
+              "WhenOpened": "2026-04-12T14:06:52.656Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "ContasFinanceirasService.cs",
-              "DocumentMoniker": "C:\\Users\\dhruv\\source\\repos\\rh-financeiro\\rh.financeiro.Services\\Services\\ContasFinanceiras\\ContasFinanceirasService.cs",
-              "RelativeDocumentMoniker": "rh.financeiro.Services\\Services\\ContasFinanceiras\\ContasFinanceirasService.cs",
-              "ToolTip": "C:\\Users\\dhruv\\source\\repos\\rh-financeiro\\rh.financeiro.Services\\Services\\ContasFinanceiras\\ContasFinanceirasService.cs",
-              "RelativeToolTip": "rh.financeiro.Services\\Services\\ContasFinanceiras\\ContasFinanceirasService.cs",
-              "ViewState": "AgIAABoAAAAAAAAAAAAQwC4BAAAAAAAAAAAAAA==",
+              "DocumentIndex": 7,
+              "Title": "ParticipantesService.cs",
+              "DocumentMoniker": "C:\\Users\\dhruv\\source\\repos\\rh-financeiro\\rh.financeiro.Services\\Services\\Participantes\\ParticipantesService.cs",
+              "RelativeDocumentMoniker": "rh.financeiro.Services\\Services\\Participantes\\ParticipantesService.cs",
+              "ToolTip": "C:\\Users\\dhruv\\source\\repos\\rh-financeiro\\rh.financeiro.Services\\Services\\Participantes\\ParticipantesService.cs",
+              "RelativeToolTip": "rh.financeiro.Services\\Services\\Participantes\\ParticipantesService.cs",
+              "ViewState": "AgIAAFgAAAAAAAAAAAAowHAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-05T15:01:27.292Z",
+              "WhenOpened": "2026-04-12T15:29:55.315Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\dhruv\\source\\repos\\rh-financeiro\\rh.financeiro.webservice\\appsettings.json",
-              "RelativeDocumentMoniker": "rh.financeiro.webservice\\appsettings.json",
-              "ToolTip": "C:\\Users\\dhruv\\source\\repos\\rh-financeiro\\rh.financeiro.webservice\\appsettings.json",
-              "RelativeToolTip": "rh.financeiro.webservice\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAApAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-04-03T19:42:04.681Z",
+              "DocumentIndex": 4,
+              "Title": "Utils.cs",
+              "DocumentMoniker": "C:\\Users\\dhruv\\source\\repos\\rh-financeiro\\rh.financeiro.CrossCutting\\Utils\\Utils.cs",
+              "RelativeDocumentMoniker": "rh.financeiro.CrossCutting\\Utils\\Utils.cs",
+              "ToolTip": "C:\\Users\\dhruv\\source\\repos\\rh-financeiro\\rh.financeiro.CrossCutting\\Utils\\Utils.cs",
+              "RelativeToolTip": "rh.financeiro.CrossCutting\\Utils\\Utils.cs",
+              "ViewState": "AgIAAIYAAAAAAAAAAAAUwJEAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-12T14:13:39.225Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "BuscarDocumentosFiscaisRequest.cs",
-              "DocumentMoniker": "C:\\Users\\dhruv\\source\\repos\\rh-financeiro\\rh.financeiro.Domain\\Dto\\Request\\DocumentoFiscal\\BuscarDocumentosFiscais\\BuscarDocumentosFiscaisRequest.cs",
-              "RelativeDocumentMoniker": "rh.financeiro.Domain\\Dto\\Request\\DocumentoFiscal\\BuscarDocumentosFiscais\\BuscarDocumentosFiscaisRequest.cs",
-              "ToolTip": "C:\\Users\\dhruv\\source\\repos\\rh-financeiro\\rh.financeiro.Domain\\Dto\\Request\\DocumentoFiscal\\BuscarDocumentosFiscais\\BuscarDocumentosFiscaisRequest.cs",
-              "RelativeToolTip": "rh.financeiro.Domain\\Dto\\Request\\DocumentoFiscal\\BuscarDocumentosFiscais\\BuscarDocumentosFiscaisRequest.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAArAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "NfeService.cs",
+              "DocumentMoniker": "C:\\Users\\dhruv\\source\\repos\\rh-financeiro\\rh.financeiro.Services\\Services\\Nfe\\NfeService.cs",
+              "RelativeDocumentMoniker": "rh.financeiro.Services\\Services\\Nfe\\NfeService.cs",
+              "ToolTip": "C:\\Users\\dhruv\\source\\repos\\rh-financeiro\\rh.financeiro.Services\\Services\\Nfe\\NfeService.cs",
+              "RelativeToolTip": "rh.financeiro.Services\\Services\\Nfe\\NfeService.cs",
+              "ViewState": "AgIAACgAAAAAAAAAAAAAADQAAAA1AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-05T13:52:52.323Z",
+              "WhenOpened": "2026-04-12T14:06:52.757Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "MovimentacaoBancariaService.cs",
+              "DocumentMoniker": "C:\\Users\\dhruv\\source\\repos\\rh-financeiro\\rh.financeiro.Services\\Services\\MovimentacaoBancaria\\MovimentacaoBancariaService.cs",
+              "RelativeDocumentMoniker": "rh.financeiro.Services\\Services\\MovimentacaoBancaria\\MovimentacaoBancariaService.cs",
+              "ToolTip": "C:\\Users\\dhruv\\source\\repos\\rh-financeiro\\rh.financeiro.Services\\Services\\MovimentacaoBancaria\\MovimentacaoBancariaService.cs",
+              "RelativeToolTip": "rh.financeiro.Services\\Services\\MovimentacaoBancaria\\MovimentacaoBancariaService.cs",
+              "ViewState": "AgIAAFwAAAAAAAAAAAAiwG0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-12T17:00:50.114Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 18,
-              "Title": "ContaFinanceiraController.cs",
-              "DocumentMoniker": "C:\\Users\\dhruv\\source\\repos\\rh-financeiro\\rh.financeiro.webservice\\Controllers\\ContaFinanceira\\ContaFinanceiraController.cs",
-              "RelativeDocumentMoniker": "rh.financeiro.webservice\\Controllers\\ContaFinanceira\\ContaFinanceiraController.cs",
-              "ToolTip": "C:\\Users\\dhruv\\source\\repos\\rh-financeiro\\rh.financeiro.webservice\\Controllers\\ContaFinanceira\\ContaFinanceiraController.cs",
-              "RelativeToolTip": "rh.financeiro.webservice\\Controllers\\ContaFinanceira\\ContaFinanceiraController.cs",
-              "ViewState": "AgIAAHcAAAAAAAAAAAAYwJIAAAAJAAAAAAAAAA==",
+              "Title": "IMovimentacaoBancariaService.cs",
+              "DocumentMoniker": "C:\\Users\\dhruv\\source\\repos\\rh-financeiro\\rh.financeiro.Domain\\Interfaces\\Service\\MovimentacaoBancaria\\IMovimentacaoBancariaService.cs",
+              "RelativeDocumentMoniker": "rh.financeiro.Domain\\Interfaces\\Service\\MovimentacaoBancaria\\IMovimentacaoBancariaService.cs",
+              "ToolTip": "C:\\Users\\dhruv\\source\\repos\\rh-financeiro\\rh.financeiro.Domain\\Interfaces\\Service\\MovimentacaoBancaria\\IMovimentacaoBancariaService.cs",
+              "RelativeToolTip": "rh.financeiro.Domain\\Interfaces\\Service\\MovimentacaoBancaria\\IMovimentacaoBancariaService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-29T17:22:44.743Z",
+              "WhenOpened": "2026-04-12T16:04:17.121Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
-              "Title": "EditarCategoriaFinanceiraRequest.cs",
-              "DocumentMoniker": "C:\\Users\\dhruv\\source\\repos\\rh-financeiro\\rh.financeiro.Domain\\Dto\\Request\\CategoriaFinanceira\\EditarCategoriaFinanceira\\EditarCategoriaFinanceiraRequest.cs",
-              "RelativeDocumentMoniker": "rh.financeiro.Domain\\Dto\\Request\\CategoriaFinanceira\\EditarCategoriaFinanceira\\EditarCategoriaFinanceiraRequest.cs",
-              "ToolTip": "C:\\Users\\dhruv\\source\\repos\\rh-financeiro\\rh.financeiro.Domain\\Dto\\Request\\CategoriaFinanceira\\EditarCategoriaFinanceira\\EditarCategoriaFinanceiraRequest.cs",
-              "RelativeToolTip": "rh.financeiro.Domain\\Dto\\Request\\CategoriaFinanceira\\EditarCategoriaFinanceira\\EditarCategoriaFinanceiraRequest.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAsAAAAtAAAAAAAAAA==",
+              "DocumentIndex": 9,
+              "Title": "ContaFinanceira.cs",
+              "DocumentMoniker": "C:\\Users\\dhruv\\source\\repos\\rh-financeiro\\rh.financeiro.Domain\\Entities\\ContaFinanceira.cs",
+              "RelativeDocumentMoniker": "rh.financeiro.Domain\\Entities\\ContaFinanceira.cs",
+              "ToolTip": "C:\\Users\\dhruv\\source\\repos\\rh-financeiro\\rh.financeiro.Domain\\Entities\\ContaFinanceira.cs",
+              "RelativeToolTip": "rh.financeiro.Domain\\Entities\\ContaFinanceira.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAA8AAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-03T14:38:20.618Z",
+              "WhenOpened": "2026-04-12T17:08:06.505Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "CategoriaFinanceiraService.cs",
+              "DocumentMoniker": "C:\\Users\\dhruv\\source\\repos\\rh-financeiro\\rh.financeiro.Services\\Services\\CategoriaFinanceira\\CategoriaFinanceiraService.cs",
+              "RelativeDocumentMoniker": "rh.financeiro.Services\\Services\\CategoriaFinanceira\\CategoriaFinanceiraService.cs",
+              "ToolTip": "C:\\Users\\dhruv\\source\\repos\\rh-financeiro\\rh.financeiro.Services\\Services\\CategoriaFinanceira\\CategoriaFinanceiraService.cs",
+              "RelativeToolTip": "rh.financeiro.Services\\Services\\CategoriaFinanceira\\CategoriaFinanceiraService.cs",
+              "ViewState": "AgIAAFwAAAAAAAAAAAAwwG8AAAA4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-12T16:52:09.078Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "ContasFinanceirasService.cs",
+              "DocumentMoniker": "C:\\Users\\dhruv\\source\\repos\\rh-financeiro\\rh.financeiro.Services\\Services\\ContasFinanceiras\\ContasFinanceirasService.cs",
+              "RelativeDocumentMoniker": "rh.financeiro.Services\\Services\\ContasFinanceiras\\ContasFinanceirasService.cs",
+              "ToolTip": "C:\\Users\\dhruv\\source\\repos\\rh-financeiro\\rh.financeiro.Services\\Services\\ContasFinanceiras\\ContasFinanceirasService.cs",
+              "RelativeToolTip": "rh.financeiro.Services\\Services\\ContasFinanceiras\\ContasFinanceirasService.cs",
+              "ViewState": "AgIAAFkAAAAAAAAAAAAwwG8AAAA4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-12T16:53:42.865Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "DefaultContext.cs",
+              "DocumentMoniker": "C:\\Users\\dhruv\\source\\repos\\rh-financeiro\\rh.financeiro.Data\\Context\\Default\\DefaultContext.cs",
+              "RelativeDocumentMoniker": "rh.financeiro.Data\\Context\\Default\\DefaultContext.cs",
+              "ToolTip": "C:\\Users\\dhruv\\source\\repos\\rh-financeiro\\rh.financeiro.Data\\Context\\Default\\DefaultContext.cs",
+              "RelativeToolTip": "rh.financeiro.Data\\Context\\Default\\DefaultContext.cs",
+              "ViewState": "AgIAAFwAAAAAAAAAAAAowGYAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-12T16:44:29.807Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "BuscarParticipantesRequest.cs",
+              "DocumentMoniker": "C:\\Users\\dhruv\\source\\repos\\rh-financeiro\\rh.financeiro.Domain\\Dto\\Request\\Participantes\\BuscarParticipantes\\BuscarParticipantesRequest.cs",
+              "RelativeDocumentMoniker": "rh.financeiro.Domain\\Dto\\Request\\Participantes\\BuscarParticipantes\\BuscarParticipantesRequest.cs",
+              "ToolTip": "C:\\Users\\dhruv\\source\\repos\\rh-financeiro\\rh.financeiro.Domain\\Dto\\Request\\Participantes\\BuscarParticipantes\\BuscarParticipantesRequest.cs",
+              "RelativeToolTip": "rh.financeiro.Domain\\Dto\\Request\\Participantes\\BuscarParticipantes\\BuscarParticipantesRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-12T15:30:06.352Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\dhruv\\source\\repos\\rh-financeiro\\rh.financeiro.webservice\\Program.cs",
+              "RelativeDocumentMoniker": "rh.financeiro.webservice\\Program.cs",
+              "ToolTip": "C:\\Users\\dhruv\\source\\repos\\rh-financeiro\\rh.financeiro.webservice\\Program.cs",
+              "RelativeToolTip": "rh.financeiro.webservice\\Program.cs",
+              "ViewState": "AgIAAB0AAAAAAAAAAADwvy4AAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-12T13:50:46.329Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Parcela.cs",
+              "DocumentMoniker": "C:\\Users\\dhruv\\source\\repos\\rh-financeiro\\rh.financeiro.Domain\\Entities\\Parcela.cs",
+              "RelativeDocumentMoniker": "rh.financeiro.Domain\\Entities\\Parcela.cs",
+              "ToolTip": "C:\\Users\\dhruv\\source\\repos\\rh-financeiro\\rh.financeiro.Domain\\Entities\\Parcela.cs",
+              "RelativeToolTip": "rh.financeiro.Domain\\Entities\\Parcela.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAACIAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-12T16:18:24.91Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "MovimentoBancario.cs",
+              "DocumentMoniker": "C:\\Users\\dhruv\\source\\repos\\rh-financeiro\\rh.financeiro.Domain\\Entities\\MovimentoBancario.cs",
+              "RelativeDocumentMoniker": "rh.financeiro.Domain\\Entities\\MovimentoBancario.cs",
+              "ToolTip": "C:\\Users\\dhruv\\source\\repos\\rh-financeiro\\rh.financeiro.Domain\\Entities\\MovimentoBancario.cs",
+              "RelativeToolTip": "rh.financeiro.Domain\\Entities\\MovimentoBancario.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAYwB8AAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-12T16:04:24.213Z",
               "EditorCaption": ""
             },
             {
@@ -448,209 +401,14 @@
               "RelativeDocumentMoniker": "rh.financeiro.webservice\\Controllers\\CategoriaFinanceira\\CategoriaFinanceiraController.cs",
               "ToolTip": "C:\\Users\\dhruv\\source\\repos\\rh-financeiro\\rh.financeiro.webservice\\Controllers\\CategoriaFinanceira\\CategoriaFinanceiraController.cs",
               "RelativeToolTip": "rh.financeiro.webservice\\Controllers\\CategoriaFinanceira\\CategoriaFinanceiraController.cs",
-              "ViewState": "AgIAAFsAAAAAAAAAAAAMwHgAAAAbAAAAAAAAAA==",
+              "ViewState": "AgIAAF0AAAAAAAAAAAAiwHMAAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-03T13:46:05.637Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "ParticipantesController.cs",
-              "DocumentMoniker": "C:\\Users\\dhruv\\source\\repos\\rh-financeiro\\rh.financeiro.webservice\\Controllers\\Participantes\\ParticipantesController.cs",
-              "RelativeDocumentMoniker": "rh.financeiro.webservice\\Controllers\\Participantes\\ParticipantesController.cs",
-              "ToolTip": "C:\\Users\\dhruv\\source\\repos\\rh-financeiro\\rh.financeiro.webservice\\Controllers\\Participantes\\ParticipantesController.cs",
-              "RelativeToolTip": "rh.financeiro.webservice\\Controllers\\Participantes\\ParticipantesController.cs",
-              "ViewState": "AgIAABEAAAAAAAAAAAAQwEYAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-29T13:54:32.663Z",
+              "WhenOpened": "2026-04-12T14:06:52.605Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 22,
-              "Title": "IJobsService.cs",
-              "DocumentMoniker": "C:\\Users\\dhruv\\source\\repos\\rh-financeiro\\rh.financeiro.Domain\\Interfaces\\Service\\Jobs\\IJobsService.cs",
-              "RelativeDocumentMoniker": "rh.financeiro.Domain\\Interfaces\\Service\\Jobs\\IJobsService.cs",
-              "ToolTip": "C:\\Users\\dhruv\\source\\repos\\rh-financeiro\\rh.financeiro.Domain\\Interfaces\\Service\\Jobs\\IJobsService.cs",
-              "RelativeToolTip": "rh.financeiro.Domain\\Interfaces\\Service\\Jobs\\IJobsService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAkAAAAhAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-03T18:01:59.611Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 23,
-              "Title": "TokenResponse.cs",
-              "DocumentMoniker": "C:\\Users\\dhruv\\source\\repos\\rh-financeiro\\rh.financeiro.Domain\\Dto\\Response\\Nfe\\Token\\TokenResponse.cs",
-              "RelativeDocumentMoniker": "rh.financeiro.Domain\\Dto\\Response\\Nfe\\Token\\TokenResponse.cs",
-              "ToolTip": "C:\\Users\\dhruv\\source\\repos\\rh-financeiro\\rh.financeiro.Domain\\Dto\\Response\\Nfe\\Token\\TokenResponse.cs",
-              "RelativeToolTip": "rh.financeiro.Domain\\Dto\\Response\\Nfe\\Token\\TokenResponse.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAjAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-03T19:41:19.651Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "Utils.cs",
-              "DocumentMoniker": "C:\\Users\\dhruv\\source\\repos\\rh-financeiro\\rh.financeiro.CrossCutting\\Utils\\Utils.cs",
-              "RelativeDocumentMoniker": "rh.financeiro.CrossCutting\\Utils\\Utils.cs",
-              "ToolTip": "C:\\Users\\dhruv\\source\\repos\\rh-financeiro\\rh.financeiro.CrossCutting\\Utils\\Utils.cs",
-              "RelativeToolTip": "rh.financeiro.CrossCutting\\Utils\\Utils.cs",
-              "ViewState": "AgIAABYAAAAAAAAAAAAhwCUAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-04T20:52:43.828Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 24,
-              "Title": "MeioPagamentoSefaz.cs",
-              "DocumentMoniker": "C:\\Users\\dhruv\\source\\repos\\rh-financeiro\\rh.financeiro.Domain\\Enums\\MeioPagamentoSefaz.cs",
-              "RelativeDocumentMoniker": "rh.financeiro.Domain\\Enums\\MeioPagamentoSefaz.cs",
-              "ToolTip": "C:\\Users\\dhruv\\source\\repos\\rh-financeiro\\rh.financeiro.Domain\\Enums\\MeioPagamentoSefaz.cs",
-              "RelativeToolTip": "rh.financeiro.Domain\\Enums\\MeioPagamentoSefaz.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAfAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-04T17:36:30.382Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 28,
-              "Title": "BuscarContasFinanceirasRequest.cs",
-              "DocumentMoniker": "C:\\Users\\dhruv\\source\\repos\\rh-financeiro\\rh.financeiro.Domain\\Dto\\Request\\ContasFinanceiras\\BuscarContasFinanceiras\\BuscarContasFinanceirasRequest.cs",
-              "RelativeDocumentMoniker": "rh.financeiro.Domain\\Dto\\Request\\ContasFinanceiras\\BuscarContasFinanceiras\\BuscarContasFinanceirasRequest.cs",
-              "ToolTip": "C:\\Users\\dhruv\\source\\repos\\rh-financeiro\\rh.financeiro.Domain\\Dto\\Request\\ContasFinanceiras\\BuscarContasFinanceiras\\BuscarContasFinanceirasRequest.cs",
-              "RelativeToolTip": "rh.financeiro.Domain\\Dto\\Request\\ContasFinanceiras\\BuscarContasFinanceiras\\BuscarContasFinanceirasRequest.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAApAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-03T14:34:14.934Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 25,
-              "Title": "ICategoriaFinanceiraService.cs",
-              "DocumentMoniker": "C:\\Users\\dhruv\\source\\repos\\rh-financeiro\\rh.financeiro.Domain\\Interfaces\\Service\\CategoriaFinanceira\\ICategoriaFinanceiraService.cs",
-              "RelativeDocumentMoniker": "rh.financeiro.Domain\\Interfaces\\Service\\CategoriaFinanceira\\ICategoriaFinanceiraService.cs",
-              "ToolTip": "C:\\Users\\dhruv\\source\\repos\\rh-financeiro\\rh.financeiro.Domain\\Interfaces\\Service\\CategoriaFinanceira\\ICategoriaFinanceiraService.cs",
-              "RelativeToolTip": "rh.financeiro.Domain\\Interfaces\\Service\\CategoriaFinanceira\\ICategoriaFinanceiraService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAqwBQAAABoAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-03T14:44:50.04Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 29,
-              "Title": "CriarCategoriaFinanceiraRequest.cs",
-              "DocumentMoniker": "C:\\Users\\dhruv\\source\\repos\\rh-financeiro\\rh.financeiro.Domain\\Dto\\Request\\CategoriaFinanceira\\CriarCategoriaFinanceira\\CriarCategoriaFinanceiraRequest.cs",
-              "RelativeDocumentMoniker": "rh.financeiro.Domain\\Dto\\Request\\CategoriaFinanceira\\CriarCategoriaFinanceira\\CriarCategoriaFinanceiraRequest.cs",
-              "ToolTip": "C:\\Users\\dhruv\\source\\repos\\rh-financeiro\\rh.financeiro.Domain\\Dto\\Request\\CategoriaFinanceira\\CriarCategoriaFinanceira\\CriarCategoriaFinanceiraRequest.cs",
-              "RelativeToolTip": "rh.financeiro.Domain\\Dto\\Request\\CategoriaFinanceira\\CriarCategoriaFinanceira\\CriarCategoriaFinanceiraRequest.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAkAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-03T14:12:33.717Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 26,
-              "Title": "IContasFinanceirasService.cs",
-              "DocumentMoniker": "C:\\Users\\dhruv\\source\\repos\\rh-financeiro\\rh.financeiro.Domain\\Interfaces\\Service\\ContaFinanceira\\IContasFinanceirasService.cs",
-              "RelativeDocumentMoniker": "rh.financeiro.Domain\\Interfaces\\Service\\ContaFinanceira\\IContasFinanceirasService.cs",
-              "ToolTip": "C:\\Users\\dhruv\\source\\repos\\rh-financeiro\\rh.financeiro.Domain\\Interfaces\\Service\\ContaFinanceira\\IContasFinanceirasService.cs",
-              "RelativeToolTip": "rh.financeiro.Domain\\Interfaces\\Service\\ContaFinanceira\\IContasFinanceirasService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAqwBcAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-03T13:27:21.67Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 30,
-              "Title": "ContaFinanceira.cs",
-              "DocumentMoniker": "C:\\Users\\dhruv\\source\\repos\\rh-financeiro\\rh.financeiro.Domain\\Entities\\ContaFinanceira.cs",
-              "RelativeDocumentMoniker": "rh.financeiro.Domain\\Entities\\ContaFinanceira.cs",
-              "ToolTip": "C:\\Users\\dhruv\\source\\repos\\rh-financeiro\\rh.financeiro.Domain\\Entities\\ContaFinanceira.cs",
-              "RelativeToolTip": "rh.financeiro.Domain\\Entities\\ContaFinanceira.cs",
-              "ViewState": "AgIAABMAAAAAAAAAAADwvyUAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-03T13:50:58.715Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 31,
-              "Title": "CriarContaFinanceiraRequest.cs",
-              "DocumentMoniker": "C:\\Users\\dhruv\\source\\repos\\rh-financeiro\\rh.financeiro.Domain\\Dto\\Request\\ContasFinanceiras\\CriarContaFinanceira\\CriarContaFinanceiraRequest.cs",
-              "RelativeDocumentMoniker": "rh.financeiro.Domain\\Dto\\Request\\ContasFinanceiras\\CriarContaFinanceira\\CriarContaFinanceiraRequest.cs",
-              "ToolTip": "C:\\Users\\dhruv\\source\\repos\\rh-financeiro\\rh.financeiro.Domain\\Dto\\Request\\ContasFinanceiras\\CriarContaFinanceira\\CriarContaFinanceiraRequest.cs",
-              "RelativeToolTip": "rh.financeiro.Domain\\Dto\\Request\\ContasFinanceiras\\CriarContaFinanceira\\CriarContaFinanceiraRequest.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAqwBUAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-03T13:25:49.918Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 32,
-              "Title": "EditarContaFinanceiraRequest.cs",
-              "DocumentMoniker": "C:\\Users\\dhruv\\source\\repos\\rh-financeiro\\rh.financeiro.Domain\\Dto\\Request\\ContasFinanceiras\\EditarContaFinanceira\\EditarContaFinanceiraRequest.cs",
-              "RelativeDocumentMoniker": "rh.financeiro.Domain\\Dto\\Request\\ContasFinanceiras\\EditarContaFinanceira\\EditarContaFinanceiraRequest.cs",
-              "ToolTip": "C:\\Users\\dhruv\\source\\repos\\rh-financeiro\\rh.financeiro.Domain\\Dto\\Request\\ContasFinanceiras\\EditarContaFinanceira\\EditarContaFinanceiraRequest.cs",
-              "RelativeToolTip": "rh.financeiro.Domain\\Dto\\Request\\ContasFinanceiras\\EditarContaFinanceira\\EditarContaFinanceiraRequest.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAqwBAAAAAuAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-03T13:29:04.11Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 34,
-              "Title": "JWTAuthorize.cs",
-              "DocumentMoniker": "C:\\Users\\dhruv\\source\\repos\\rh-financeiro\\rh.financeiro.webservice\\Middlewares\\JWTAuthorize.cs",
-              "RelativeDocumentMoniker": "rh.financeiro.webservice\\Middlewares\\JWTAuthorize.cs",
-              "ToolTip": "C:\\Users\\dhruv\\source\\repos\\rh-financeiro\\rh.financeiro.webservice\\Middlewares\\JWTAuthorize.cs",
-              "RelativeToolTip": "rh.financeiro.webservice\\Middlewares\\JWTAuthorize.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAfAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-29T13:11:15.119Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 33,
-              "Title": "AuthController.cs",
-              "DocumentMoniker": "C:\\Users\\dhruv\\source\\repos\\rh-financeiro\\rh.financeiro.webservice\\Controllers\\Auth\\AuthController.cs",
-              "RelativeDocumentMoniker": "rh.financeiro.webservice\\Controllers\\Auth\\AuthController.cs",
-              "ToolTip": "C:\\Users\\dhruv\\source\\repos\\rh-financeiro\\rh.financeiro.webservice\\Controllers\\Auth\\AuthController.cs",
-              "RelativeToolTip": "rh.financeiro.webservice\\Controllers\\Auth\\AuthController.cs",
-              "ViewState": "AgIAAGYAAAAAAAAAAAAIwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-29T17:02:53.531Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 35,
-              "Title": "rh.financeiro.webservice.csproj",
-              "DocumentMoniker": "C:\\Users\\dhruv\\source\\repos\\rh-financeiro\\rh.financeiro.webservice\\rh.financeiro.webservice.csproj",
-              "RelativeDocumentMoniker": "rh.financeiro.webservice\\rh.financeiro.webservice.csproj",
-              "ToolTip": "C:\\Users\\dhruv\\source\\repos\\rh-financeiro\\rh.financeiro.webservice\\rh.financeiro.webservice.csproj",
-              "RelativeToolTip": "rh.financeiro.webservice\\rh.financeiro.webservice.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2026-03-28T15:31:05.412Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 36,
               "Title": "appsettings.Production.json",
               "DocumentMoniker": "C:\\Users\\dhruv\\source\\repos\\rh-financeiro\\rh.financeiro.webservice\\appsettings.Production.json",
               "RelativeDocumentMoniker": "rh.financeiro.webservice\\appsettings.Production.json",
@@ -658,46 +416,83 @@
               "RelativeToolTip": "rh.financeiro.webservice\\appsettings.Production.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-03-28T15:33:31.108Z",
+              "WhenOpened": "2026-04-12T14:01:06.302Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 38,
-              "Title": "launchSettings.json",
-              "DocumentMoniker": "C:\\Users\\dhruv\\source\\repos\\rh-financeiro\\rh.financeiro.webservice\\Properties\\launchSettings.json",
-              "RelativeDocumentMoniker": "rh.financeiro.webservice\\Properties\\launchSettings.json",
-              "ToolTip": "C:\\Users\\dhruv\\source\\repos\\rh-financeiro\\rh.financeiro.webservice\\Properties\\launchSettings.json",
-              "RelativeToolTip": "rh.financeiro.webservice\\Properties\\launchSettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAfAAAAAAAAAA==",
+              "DocumentIndex": 23,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\dhruv\\source\\repos\\rh-financeiro\\rh.financeiro.webservice\\appsettings.json",
+              "RelativeDocumentMoniker": "rh.financeiro.webservice\\appsettings.json",
+              "ToolTip": "C:\\Users\\dhruv\\source\\repos\\rh-financeiro\\rh.financeiro.webservice\\appsettings.json",
+              "RelativeToolTip": "rh.financeiro.webservice\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-03-28T15:32:00.099Z",
+              "WhenOpened": "2026-04-12T13:50:56.774Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 37,
+              "DocumentIndex": 26,
+              "Title": "MovimentacaoBancariaController.cs",
+              "DocumentMoniker": "C:\\Users\\dhruv\\source\\repos\\rh-financeiro\\rh.financeiro.webservice\\Controllers\\MovimentacaoBancaria\\MovimentacaoBancariaController.cs",
+              "RelativeDocumentMoniker": "rh.financeiro.webservice\\Controllers\\MovimentacaoBancaria\\MovimentacaoBancariaController.cs",
+              "ToolTip": "C:\\Users\\dhruv\\source\\repos\\rh-financeiro\\rh.financeiro.webservice\\Controllers\\MovimentacaoBancaria\\MovimentacaoBancariaController.cs",
+              "RelativeToolTip": "rh.financeiro.webservice\\Controllers\\MovimentacaoBancaria\\MovimentacaoBancariaController.cs",
+              "ViewState": "AgIAAD8AAAAAAAAAAAAcwE4AAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-11T20:37:27.954Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "ContaFinanceiraController.cs",
+              "DocumentMoniker": "C:\\Users\\dhruv\\source\\repos\\rh-financeiro\\rh.financeiro.webservice\\Controllers\\ContaFinanceira\\ContaFinanceiraController.cs",
+              "RelativeDocumentMoniker": "rh.financeiro.webservice\\Controllers\\ContaFinanceira\\ContaFinanceiraController.cs",
+              "ToolTip": "C:\\Users\\dhruv\\source\\repos\\rh-financeiro\\rh.financeiro.webservice\\Controllers\\ContaFinanceira\\ContaFinanceiraController.cs",
+              "RelativeToolTip": "rh.financeiro.webservice\\Controllers\\ContaFinanceira\\ContaFinanceiraController.cs",
+              "ViewState": "AgIAALsAAAAAAAAAAAAcwMsAAAA5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-11T19:42:32.253Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
               "Title": "appsettings.Development.json",
               "DocumentMoniker": "C:\\Users\\dhruv\\source\\repos\\rh-financeiro\\rh.financeiro.webservice\\appsettings.Development.json",
               "RelativeDocumentMoniker": "rh.financeiro.webservice\\appsettings.Development.json",
               "ToolTip": "C:\\Users\\dhruv\\source\\repos\\rh-financeiro\\rh.financeiro.webservice\\appsettings.Development.json",
               "RelativeToolTip": "rh.financeiro.webservice\\appsettings.Development.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-03-28T15:28:16.763Z",
+              "WhenOpened": "2026-04-12T14:04:18.776Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 39,
-              "Title": "Dockerfile",
-              "DocumentMoniker": "C:\\Users\\dhruv\\source\\repos\\rh-financeiro\\rh.financeiro.webservice\\Dockerfile",
-              "RelativeDocumentMoniker": "rh.financeiro.webservice\\Dockerfile",
-              "ToolTip": "C:\\Users\\dhruv\\source\\repos\\rh-financeiro\\rh.financeiro.webservice\\Dockerfile",
-              "RelativeToolTip": "rh.financeiro.webservice\\Dockerfile",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2026-03-28T15:27:33.577Z",
+              "DocumentIndex": 21,
+              "Title": "DocumentoFiscalController.cs",
+              "DocumentMoniker": "C:\\Users\\dhruv\\source\\repos\\rh-financeiro\\rh.financeiro.webservice\\Controllers\\DocumentoFiscal\\DocumentoFiscalController.cs",
+              "RelativeDocumentMoniker": "rh.financeiro.webservice\\Controllers\\DocumentoFiscal\\DocumentoFiscalController.cs",
+              "ToolTip": "C:\\Users\\dhruv\\source\\repos\\rh-financeiro\\rh.financeiro.webservice\\Controllers\\DocumentoFiscal\\DocumentoFiscalController.cs",
+              "RelativeToolTip": "rh.financeiro.webservice\\Controllers\\DocumentoFiscal\\DocumentoFiscalController.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAAgwCUAAABDAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-11T20:37:33.671Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "C:\\Users\\dhruv\\source\\repos\\rh-financeiro\\rh.financeiro.webservice\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "rh.financeiro.webservice\\Properties\\launchSettings.json",
+              "ToolTip": "C:\\Users\\dhruv\\source\\repos\\rh-financeiro\\rh.financeiro.webservice\\Properties\\launchSettings.json",
+              "RelativeToolTip": "rh.financeiro.webservice\\Properties\\launchSettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-04-12T14:04:34.271Z",
               "EditorCaption": ""
             }
           ]

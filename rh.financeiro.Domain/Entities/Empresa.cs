@@ -22,6 +22,6 @@ namespace rh.financeiro.Domain.Entities
         public string Nome { get; set; }
 
         [Column("created_at")]
-        public DateTime CreatedAt { get; set; }
+        public DateTime CreatedAt { get; set; } = DateTime.Now.ToUniversalTime();
     }
 }

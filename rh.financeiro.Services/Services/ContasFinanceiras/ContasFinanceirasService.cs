@@ -106,8 +106,10 @@ namespace rh.financeiro.Services.Services.ContasFinanceiras
                 // Filtro por tipo
                 if (request.tipo != null)
                 {
-                    queryContaFinanceira = queryContaFinanceira
-                        .Where(x => x.Tipo.ToString() == request.tipo);
+                    var tipoEnum = Enum.Parse<TipoConta>(request.tipo, true);
+                    queryContaFinanceira = (IQueryable<ContaFinanceira>)queryContaFinanceira
+                        .AsEnumerable()
+                        .Where(x => x.Tipo == tipoEnum);
                 }
 
                 // Filtrar por ativo

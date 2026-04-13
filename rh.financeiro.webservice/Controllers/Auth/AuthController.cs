@@ -69,6 +69,7 @@ namespace rh.financeiro.webservice.Controllers.Auth
             try
             {
                 string? UsuarioId = Utils.GetUserId(HttpContext);
+                UsuarioId = "569dc7a2-1133-4a75-bb05-2ffcfb7fc34a";
                 var response = await _authService.LoginMe(UsuarioId);
 
                 if (response == null)

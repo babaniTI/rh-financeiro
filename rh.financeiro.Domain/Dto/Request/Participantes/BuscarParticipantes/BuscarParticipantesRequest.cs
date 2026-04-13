@@ -10,7 +10,7 @@ namespace rh.financeiro.Domain.Dto.Request.Participantes.BuscarParticipantes
 {
     public class BuscarParticipantesRequest : PaginacaoRequest
     {
-        public TipoParticipante? tipo { get; set; }
+        public string? tipo { get; set; }
         public bool? ativo { get; set; } = true;
         public string? search { get; set; }
     }

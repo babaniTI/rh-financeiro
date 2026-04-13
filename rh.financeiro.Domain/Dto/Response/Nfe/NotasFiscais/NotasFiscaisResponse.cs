@@ -7,6 +7,8 @@ using System.Threading.Tasks;
 
 namespace rh.financeiro.Domain.Dto.Response.Nfe.NotasFiscais
 {
+    using System.Text.Json.Serialization;
+
     public class NotasFiscaisResponse
     {
         [JsonPropertyName("notas_fiscais")]
@@ -20,12 +22,16 @@ namespace rh.financeiro.Domain.Dto.Response.Nfe.NotasFiscais
     {
         public long Id { get; set; }
 
+        [JsonPropertyName("xml")]
         public string? Xml { get; set; }
 
         [JsonPropertyName("xml_cancelamento")]
         public string? XmlCancelamento { get; set; }
 
+        [JsonPropertyName("usuario")]
         public string? Usuario { get; set; }
+
+        [JsonPropertyName("serie")]
         public int? Serie { get; set; }
 
         [JsonPropertyName("numero_nfe")]
@@ -40,6 +46,7 @@ namespace rh.financeiro.Domain.Dto.Response.Nfe.NotasFiscais
         [JsonPropertyName("dthr_emissao")]
         public DateTime DthrEmissao { get; set; }
 
+        [JsonPropertyName("status")]
         public string? Status { get; set; }
 
         [JsonPropertyName("informacoes_complementares")]
@@ -48,6 +55,7 @@ namespace rh.financeiro.Domain.Dto.Response.Nfe.NotasFiscais
         [JsonPropertyName("natureza_da_operacao")]
         public string? NaturezaDaOperacao { get; set; }
 
+        [JsonPropertyName("protocolo")]
         public string? Protocolo { get; set; }
 
         [JsonPropertyName("motivo_cancelamento")]
@@ -59,11 +67,22 @@ namespace rh.financeiro.Domain.Dto.Response.Nfe.NotasFiscais
         [JsonPropertyName("chave_acesso_nfe")]
         public string? ChaveAcessoNfe { get; set; }
 
+        [JsonPropertyName("quantidade_volume")]
         public decimal? QuantidadeVolume { get; set; }
+
+        [JsonPropertyName("especie_volumes")]
         public string? EspecieVolumes { get; set; }
+
+        [JsonPropertyName("marca_volumes")]
         public string? MarcaVolumes { get; set; }
+
+        [JsonPropertyName("numeracao_volumes")]
         public string? NumeracaoVolumes { get; set; }
+
+        [JsonPropertyName("peso_liquido")]
         public decimal? PesoLiquido { get; set; }
+
+        [JsonPropertyName("peso_bruto")]
         public decimal? PesoBruto { get; set; }
 
         [JsonPropertyName("valor_nota_nfe")]
@@ -135,14 +154,22 @@ namespace rh.financeiro.Domain.Dto.Response.Nfe.NotasFiscais
         [JsonPropertyName("valor_pis_aproveitado")]
         public string? ValorPisAproveitado { get; set; }
 
+        [JsonPropertyName("uf")]
         public Uf? Uf { get; set; }
+
+        [JsonPropertyName("municipio")]
         public Municipio? Municipio { get; set; }
+
+        [JsonPropertyName("cfop")]
         public Cfop? Cfop { get; set; }
+
+        [JsonPropertyName("financeiro")]
         public Financeiro? Financeiro { get; set; }
     }
 
     public class Uf
     {
+        [JsonPropertyName("nome")]
         public string? Nome { get; set; }
 
         [JsonPropertyName("nome_por_extenso")]
@@ -154,6 +181,7 @@ namespace rh.financeiro.Domain.Dto.Response.Nfe.NotasFiscais
 
     public class Municipio
     {
+        [JsonPropertyName("nome")]
         public string? Nome { get; set; }
 
         [JsonPropertyName("codigo_ibge")]
@@ -162,7 +190,10 @@ namespace rh.financeiro.Domain.Dto.Response.Nfe.NotasFiscais
 
     public class Cfop
     {
+        [JsonPropertyName("codigo")]
         public string? Codigo { get; set; }
+
+        [JsonPropertyName("descricao")]
         public string? Descricao { get; set; }
     }
 
@@ -189,11 +220,13 @@ namespace rh.financeiro.Domain.Dto.Response.Nfe.NotasFiscais
         [JsonPropertyName("falta_liquidar")]
         public decimal? FaltaLiquidar { get; set; }
 
+        [JsonPropertyName("recebimentos")]
         public List<object>? Recebimentos { get; set; }
     }
 
     public class Pagination
     {
+        [JsonPropertyName("total")]
         public int Total { get; set; }
 
         [JsonPropertyName("previous_page")]

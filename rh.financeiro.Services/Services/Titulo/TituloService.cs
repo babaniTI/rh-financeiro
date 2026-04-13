@@ -45,13 +45,10 @@ namespace rh.financeiro.Services.Services.Titulos
                 from df in repoDocumentoFiscal
                 join ti in repoTitulo
                     on df.Id equals ti.DocumentoId
-                join pt in repoParticipante
-                    on df.ParticipanteId equals pt.Id
                 where df.EmpresaId == EmpresaId
                 select new
                 {
                     Documento = df,
-                    Partipante = pt,
                     Titulo = ti
                 };
             #endregion
@@ -61,10 +58,16 @@ namespace rh.financeiro.Services.Services.Titulos
             {
 
                 if (!string.IsNullOrEmpty(request.tipo))
-                    query = query.Where(x => x.Titulo.Tipo.ToString() == request.tipo);
+                {
+                    var tipoEnum = Enum.Parse<TipoTitulo>(request.tipo, true);
+                    query = query.Where(x => x.Titulo.Tipo == tipoEnum);
+                }
 
                 if (!string.IsNullOrEmpty(request.status))
-                    query = query.Where(x => x.Titulo.Status.ToString() == request.status);
+                {
+                    var statusEnum = Enum.Parse<StatusTitulo>(request.status, true);
+                    query = query.Where(x => x.Titulo.Status == statusEnum);
+                }
 
                 #region Filtro por Data de Emissão (ISO 8601)
                 DateTimeOffset? dataInicio = string.IsNullOrEmpty(request.dataEmissaoInicio)
@@ -91,7 +94,7 @@ namespace rh.financeiro.Services.Services.Titulos
                 {
                     var search = request.search.Trim();
                     query = query.Where(x =>
-                        x.Documento.Numero.ToString().Equals(search)
+                        x.Documento.Numero == search
                     );
                 }
 
@@ -107,10 +110,11 @@ namespace rh.financeiro.Services.Services.Titulos
                     .Select(x => new
                     {
                         Documento = x.Documento,
-                        Partipante = x.Partipante,
+                        Partipante = repoParticipante.FirstOrDefault(p => p.Id == x.Documento.ParticipanteId),
                         Titulo = x.Titulo,
                         Parcelas = repoParcela
                         .Where(p => p.TituloId == x.Titulo.Id)
+                        .OrderBy(p => p.Numero)
                         .ToList()
                     })
                     .ToListAsync();
@@ -121,7 +125,7 @@ namespace rh.financeiro.Services.Services.Titulos
                     EmpresaId = EmpresaId,
                     Tipo = x.Titulo.Tipo,
                     Numero = x.Documento.Numero,
-                    NomeParticipante = x.Partipante.Nome,
+                    NomeParticipante = x.Partipante?.Nome,
                     DataEmissao = x.Documento.DataEmissao,
                     ValorTotal = x.Documento.ValorTotal,
                     ValorPago = x.Parcelas.Where(x => x.Status == StatusParcela.Pago).Sum(x => x.Valor),
